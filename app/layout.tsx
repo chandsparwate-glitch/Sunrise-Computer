@@ -1,11 +1,18 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import TopNotification from "@/components/TopNotification";
 import Footer from "@/components/Footer";
+import FloatingButtons from "@/components/FloatingButtons";
+import GoogleReviews from "@/components/GoogleReviews";
 
 export const metadata = {
   title: "Sunrise Computer Education",
   description: "MKCL Authorized Learning Center - Sangadi",
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -15,25 +22,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        style={{
-          margin: 0,
-          padding: 0,
-          fontFamily: "Arial, sans-serif",
-          backgroundColor: "#ffffff",
-        }}
-      >
+      <body className="main-body">
         <Navbar />
+        <TopNotification />
 
-        <main
-          style={{
-            minHeight: "80vh",
-          }}
-        >
+        <main className="main-content">
           {children}
         </main>
 
+        <GoogleReviews />
         <Footer />
+        <FloatingButtons />
       </body>
     </html>
   );

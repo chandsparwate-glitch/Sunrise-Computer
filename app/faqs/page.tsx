@@ -1,75 +1,128 @@
 "use client";
+import { useState } from "react";
 
 export default function FAQs() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const faqData = [
+    {
+      icon: "📝",
+      question: "Admission कशी घ्यायची?",
+      answer:
+        "Admission साठी institute ला direct visit करा किंवा WhatsApp वर enquiry पाठवा.",
+    },
+    {
+      icon: "📚",
+      question: "कोणकोणते courses उपलब्ध आहेत?",
+      answer:
+        "MS-CIT, Tally with GST, Data Entry, Advance Excel, Hardware, Artificial Intelligence, Typing (CCTP), Photo Editing, MS-CIT Refresh.",
+    },
+    {
+      icon: "⏳",
+      question: "Course duration किती असते?",
+      answer: "Course नुसार 1 ते 3 महिने duration असते.",
+    },
+    {
+      icon: "💳",
+      question: "Fees installment मध्ये भरता येतात का?",
+      answer:
+        "होय, काही selected courses साठी installment सुविधा उपलब्ध आहे.",
+    },
+    {
+      icon: "🎓",
+      question: "Course पूर्ण झाल्यावर certificate मिळते का?",
+      answer:
+        "होय, course पूर्ण झाल्यावर अधिकृत certificate दिले जाते.",
+    },
+    {
+      icon: "🧑‍🏫",
+      question: "Practice आणि guidance दिली जाते का?",
+      answer:
+        "होय, प्रत्येक course साठी practical training आणि proper guidance दिली जाते.",
+    },
+    {
+      icon: "⏰",
+      question: "Class timing काय आहे?",
+      answer: "Morning 8:00 AM पासून 7:00 PM.",
+    },
+    {
+      icon: "📄",
+      question: "Admission साठी कोणते documents लागतात?",
+      answer:
+        "Aadhar Card Copy आणि Passport Size Photo आवश्यक आहे.",
+    },
+  ];
+
   return (
     <>
       <section
         style={{
-          padding: "80px 20px",
-          background: "linear-gradient(135deg, #f8fafc, #e2e8f0)",
+          padding: "30px 20px",
+          background:
+            "linear-gradient(135deg, #e0f2fe, #bfdbfe, #fef3c7)",
           textAlign: "center",
-          minHeight: "100vh",
         }}
       >
         <h2
           style={{
-            fontSize: "36px",
-            marginBottom: "10px",
-            fontWeight: "800",
-            color: "#0f172a",
+            fontSize: "28px",
+            marginBottom: "4px",
+            fontWeight: 800,
+            color: "#1e3a8a",
           }}
         >
           Frequently Asked Questions
         </h2>
 
-        <p
+        <div
           style={{
-            marginBottom: "35px",
-            color: "#475569",
-            fontSize: "18px",
+            display: "inline-block",
+            background: "#fbbf24",
+            padding: "6px 18px",
+            borderRadius: "20px",
+            fontSize: "14px",
+            fontWeight: 600,
+            color: "#000",
+            marginBottom: "20px",
           }}
         >
           विद्यार्थ्यांचे सामान्य प्रश्न
-        </p>
-
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <FAQ question="Admission कशी घ्यायची?">
-            Admission साठी institute ला direct visit करा किंवा WhatsApp वर enquiry पाठवा.
-          </FAQ>
-
-          <FAQ question="कोणकोणते courses उपलब्ध आहेत?">
-            MS-CIT, Tally with GST, Data Entry, Advance Excel, Hardware,
-            Artificial Intelligence, Typing (CCTP), Photo Editing, MS-CIT Refresh.
-          </FAQ>
-
-          <FAQ question="Course duration किती असते?">
-            Course नुसार 1 ते 3 महिने duration असते.
-          </FAQ>
-
-          <FAQ question="Fees installment मध्ये भरता येतात का?">
-            होय, काही selected courses साठी installment सुविधा उपलब्ध आहे.
-          </FAQ>
-
-          <FAQ question="Course पूर्ण झाल्यावर certificate मिळते का?">
-            होय, course पूर्ण झाल्यावर अधिकृत certificate दिले जाते.
-          </FAQ>
-
-          <FAQ question="Practice आणि guidance दिली जाते का?">
-            होय, प्रत्येक course साठी practical training आणि proper guidance दिली जाते.
-          </FAQ>
-
-          <FAQ question="Class timing काय आहे?">
-            Morning 8:00 AM पासून 7:00 PM.
-          </FAQ>
-
-          <FAQ question="Admission साठी कोणते documents लागतात?">
-            Aadhar Card Copy आणि Passport Size Photo आवश्यक आहे.
-          </FAQ>
         </div>
 
-        {/* WhatsApp Help */}
-        <div style={{ marginTop: "45px" }}>
-          <p style={{ fontSize: "18px", marginBottom: "15px", color: "#1e293b" }}>
+        <div className="faq-container">
+          {faqData.map((item, index) => (
+            <div
+              key={index}
+              className="faq-item"
+              onClick={() => toggleFAQ(index)}
+            >
+              <div className="faq-question">
+                <span className="icon">{item.icon}</span>
+                {item.question}
+              </div>
+
+              {activeIndex === index && (
+                <div className="faq-answer">
+                  {item.answer}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* 🔥 WhatsApp CTA (तसाच ठेवला आहे) */}
+        <div style={{ marginTop: "25px" }}>
+          <p
+            style={{
+              fontSize: "16px",
+              marginBottom: "10px",
+              color: "#1e293b",
+            }}
+          >
             अजून प्रश्न आहेत का?
           </p>
 
@@ -83,69 +136,81 @@ export default function FAQs() {
         </div>
       </section>
 
-      <style>
-        {`
-          .faq-item {
-            margin-bottom: 15px;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            overflow: hidden;
-            text-align: left;
+      <style jsx>{`
+        .faq-container {
+          max-width: 780px;
+          margin: 0 auto;
+          text-align: left;
+        }
+
+        .faq-item {
+          margin-bottom: 12px;
+          background: #ffffff;
+          border-radius: 12px;
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+
+        .faq-item:hover {
+          transform: translateY(-3px);
+        }
+
+        .faq-question {
+          font-weight: 700;
+          font-size: 16px;
+          color: #1e3a8a;
+          padding: 14px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .icon {
+          font-size: 18px;
+        }
+
+        .faq-answer {
+          padding: 0 14px 14px 42px;
+          font-size: 15px;
+          color: #334155;
+          line-height: 1.6;
+        }
+
+        .faq-btn {
+          display: inline-block;
+          padding: 12px 26px;
+          background: linear-gradient(135deg, #25D366, #128C7E);
+          color: #fff;
+          font-size: 16px;
+          border-radius: 30px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: 0.3s;
+        }
+
+        .faq-btn:hover {
+          transform: translateY(-3px) scale(1.05);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        @media (max-width: 768px) {
+          h2 {
+            font-size: 22px;
           }
 
-          summary {
-            font-weight: 700;
-            font-size: 18px;
-            color: #1e3a8a;
-            cursor: pointer;
-            padding: 16px;
-            transition: 0.3s;
+          .faq-question {
+            font-size: 15px;
+            padding: 12px;
           }
 
-          summary:hover {
-            background: #e2e8f0;
+          .faq-answer {
+            font-size: 14px;
+            padding-left: 38px;
           }
-
-          details[open] summary {
-            color: #dc2626;
-          }
-
-          details p {
-            padding: 0 16px 16px 16px;
-            font-size: 16px;
-            color: #334155;
-            line-height: 1.6;
-          }
-
-          .faq-btn {
-            display: inline-block;
-            padding: 14px 30px;
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            color: #fff;
-            font-size: 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-          }
-
-          .faq-btn:hover {
-            transform: scale(1.08);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-          }
-        `}
-      </style>
+        }
+      `}</style>
     </>
-  );
-}
-
-/* FAQ Component */
-function FAQ({ question, children }: any) {
-  return (
-    <details className="faq-item">
-      <summary>{question}</summary>
-      <p>{children}</p>
-    </details>
   );
 }

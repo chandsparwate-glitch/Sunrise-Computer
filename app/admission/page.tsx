@@ -34,21 +34,27 @@ Course: ${form.course}`
     <>
       <section
         style={{
-          padding: "80px 20px",
+          padding: "60px 20px", // 🔥 spacing kami
           background: "linear-gradient(135deg, #e2e8f0, #cbd5e1)",
           textAlign: "center",
           minHeight: "100vh",
         }}
       >
-        <h2 style={{ fontSize: "34px", fontWeight: "800" }}>
+        {/* 🔥 BRAND BADGE */}
+        <div className="brandBadge">
+          Sunrise Computer, Sangadi
+        </div>
+
+        {/* 🔥 HEADING */}
+        <h3 className="mainHeading">
           Admission Enquiry
-        </h2>
+        </h3>
 
         <form
           onSubmit={handleSubmit}
           style={{
             maxWidth: "420px",
-            margin: "25px auto",
+            margin: "20px auto",
             background: "#ffffff",
             padding: "30px",
             borderRadius: "12px",
@@ -104,11 +110,34 @@ Course: ${form.course}`
             />
             WhatsApp वर पाठवा
           </button>
+
+          {/* 🔥 TIP BOX (button khali) */}
+          <div className="tipBox">
+            Admission करिता वरील माहिती भरून WhatsApp वर send करा
+          </div>
         </form>
       </section>
 
       <style>
         {`
+          .brandBadge {
+            display: inline-block;
+            background: #f97316;
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 30px;
+            margin-bottom: 10px;
+          }
+
+          .mainHeading {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #021030;
+          }
+
           .whatsapp-btn {
             display: flex;
             align-items: center;
@@ -120,7 +149,7 @@ Course: ${form.course}`
             border: none;
             font-size: 16px;
             font-weight: bold;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             transition: 0.3s ease;
             animation: glow 2s infinite alternate;
@@ -131,12 +160,23 @@ Course: ${form.course}`
             box-shadow: 0 10px 25px rgba(0,0,0,0.3);
           }
 
+          .tipBox {
+            margin-top: 6px;
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            color: #9a3412;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 500;
+          }
+
           @keyframes glow {
             from {
-              box-shadow: 0 0 10px rgba(0,0,0,0.3);
+              box-shadow: 0 0 10px rgba(0,0,0,0.25);
             }
             to {
-              box-shadow: 0 0 20px rgba(0,0,0,0.6);
+              box-shadow: 0 0 20px rgba(0,0,0,0.45);
             }
           }
         `}
