@@ -61,7 +61,7 @@ export default function Home() {
         </p>
 
         <p className="tagline">
-          🚀 MKCL Authorised Center – Code 44210101
+          🚀 MKCL Authorised Center: Reg.No. 44210101
         </p>
 
         <div className="buttonArea">
@@ -178,7 +178,7 @@ export default function Home() {
         .tagline {
           margin-top: 8px;
           font-weight: 600;
-          color: #6b7280;
+          color: #34373d;
         }
 
         .buttonArea {

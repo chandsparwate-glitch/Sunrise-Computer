@@ -54,7 +54,7 @@ export default function Footer() {
       </div>
 
       <div className="bottom">
-        <div>👁 Visitors : <strong>000762</strong></div>
+        <div>👁 Visitors : <strong>003762</strong></div>
         <div>© {new Date().getFullYear()} Sunrise Computer</div>
 
         <div className="socials">
@@ -77,7 +77,7 @@ export default function Footer() {
         .footer {
           background: linear-gradient(135deg, #0f8088, #06666d);
           color: #ffffff;
-          padding: 45px 20px 22px;
+          padding: 30px 20px 18px;
         }
 
         .grid {
@@ -91,11 +91,11 @@ export default function Footer() {
         .column {
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: 12px;
         }
 
         .brand {
-          font-size: 22px;
+          font-size: 26px;
           font-weight: 900;
           margin: 0;
         }
@@ -109,18 +109,17 @@ export default function Footer() {
         }
 
         h4 {
-          font-size: 17px;
+          font-size: 20px;
           font-weight: 700;
-          margin-bottom: 4px;
+          margin-bottom: 6px;
         }
 
         p {
-          font-size: 15px;
-          line-height: 1.5;
+          font-size: 17px;
+          line-height: 1.6;
           margin: 0;
         }
 
-        /* 🔥 Reduced list spacing */
         .tightList {
           list-style: none;
           padding: 0;
@@ -128,23 +127,23 @@ export default function Footer() {
         }
 
         .tightList li {
-          margin-bottom: 4px; /* 🔥 Tight spacing */
+          margin-bottom: 6px;
         }
 
         a {
           color: #ffffff;
           text-decoration: none;
-          font-size: 15px;
+          font-size: 17px;
           transition: 0.3s;
         }
 
         a:hover {
           color: #fbbf24;
-          padding-left: 3px;
+          padding-left: 4px;
         }
 
         .bottom {
-          margin-top: 30px;
+          margin-top: 25px;
           padding-top: 15px;
           border-top: 1px solid rgba(255,255,255,0.3);
           display: flex;
@@ -155,7 +154,7 @@ export default function Footer() {
           max-width: 1200px;
           margin-left: auto;
           margin-right: auto;
-          font-size: 14px;
+          font-size: 15px;
         }
 
         .socials {
@@ -167,8 +166,8 @@ export default function Footer() {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 36px;
-          height: 36px;
+          width: 38px;
+          height: 38px;
           background: rgba(255,255,255,0.15);
           border-radius: 50%;
           transition: 0.3s;
@@ -206,14 +205,15 @@ export default function Footer() {
           }
 
           .brand {
-            font-size: 20px;
+            font-size: 22px;
           }
 
           p, a {
-            font-size: 14px;
+            font-size: 16px;
           }
         }
       `}</style>
+
     </footer>
   );
 }
