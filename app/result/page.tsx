@@ -26,7 +26,7 @@ export default function ResultPage() {
     { id: 9, name: "Tina L. Gotephode", course: "MS-CIT", marks: 100, photo: "/students/tina.jpg", year: 2024 },
     { id: 10, name: "Tinkal L. Gotefode", course: "MS-CIT", marks: 100, photo: "/students/tinkal.jpg", year: 2024 },
     { id: 11, name: "Tanmay A. Meshram", course: "MS-CIT", marks: 100, photo: "/students/tanmay.jpg", year: 2024 },
-    { id: 12, name: "Vinit Borkar", course: "MS-CIT", marks: 100, photo: "/students/vinit.jpg", year: 2026 },
+    { id: 12, name: "Vinit Borkar", course: "MS-CIT", marks: 100, photo: "/students/vinit.jpg", year: 2025 },
   ];
 
   useEffect(() => {

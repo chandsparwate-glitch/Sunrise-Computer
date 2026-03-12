@@ -137,7 +137,7 @@ export default function About() {
             <StaffCard
               image="/shital.jpg"
               name="Miss Shital Gobade"
-              edu="B.Com"
+              edu="M.Com"
               exp="3 Years Experience"
             />
             <StaffCard
@@ -149,7 +149,7 @@ export default function About() {
             <StaffCard
               image="/damini.jpg"
               name="Miss Damini Giri"
-              edu="B.Com"
+              edu="B.A."
               exp="2 Years Experience"
             />
           </div>
