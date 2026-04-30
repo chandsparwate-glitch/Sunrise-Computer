@@ -522,7 +522,29 @@ export default function FundamentalTestPage() {
     setWarning("");
   };
 
-  const startExam = () => {
+  const openBrowserFullScreen = async () => {
+    try {
+      const element = document.documentElement;
+
+      if (!document.fullscreenElement && element.requestFullscreen) {
+        await element.requestFullscreen();
+      }
+    } catch {
+      // Browser ने fullscreen block केला तरी test सुरू होईल
+    }
+  };
+
+  const closeBrowserFullScreen = async () => {
+    try {
+      if (document.fullscreenElement) {
+        await document.exitFullscreen();
+      }
+    } catch {
+      // ignore
+    }
+  };
+
+  const startExam = async () => {
     if (batchTime.trim() === "") {
       setWarning(language === "mr" ? "कृपया Batch Time टाका." : "Please enter Batch Time.");
       return;
@@ -531,6 +553,9 @@ export default function FundamentalTestPage() {
     localStorage.setItem("studentBatchTime", batchTime);
     localStorage.setItem("testLanguage", language);
     setWarning("");
+
+    await openBrowserFullScreen();
+
     setExamStarted(true);
   };
 
@@ -569,6 +594,7 @@ export default function FundamentalTestPage() {
       setTimeLeft(30);
     } else {
       setQuestionStatuses(updatedStatuses);
+      closeBrowserFullScreen();
       setIsFinished(true);
     }
   };
@@ -868,16 +894,42 @@ export default function FundamentalTestPage() {
         <style jsx>{styles}</style>
 
         <style jsx global>{`
+  html.exam-fullscreen-mode nav,
+  html.exam-fullscreen-mode header,
+  html.exam-fullscreen-mode footer,
+  html.exam-fullscreen-mode .navbar,
+  html.exam-fullscreen-mode .top-notification,
+  html.exam-fullscreen-mode .TopNotification,
+  html.exam-fullscreen-mode .footer,
   body.exam-fullscreen-mode nav,
   body.exam-fullscreen-mode header,
-  body.exam-fullscreen-mode .navbar {
+  body.exam-fullscreen-mode footer,
+  body.exam-fullscreen-mode .navbar,
+  body.exam-fullscreen-mode .top-notification,
+  body.exam-fullscreen-mode .TopNotification,
+  body.exam-fullscreen-mode .footer {
     display: none !important;
   }
 
+  html.exam-fullscreen-mode,
   body.exam-fullscreen-mode {
-    overflow-x: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
   }
-`}</style>
+
+  html.exam-fullscreen-mode .examPage,
+  body.exam-fullscreen-mode .examPage {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    z-index: 999999 !important;
+    padding: 8px 10px 12px !important;
+    overflow-y: auto !important;
+  }
+      `}</style>
       </main>
     );
   }
@@ -1152,6 +1204,13 @@ export default function FundamentalTestPage() {
       <style jsx>{styles}</style>
 
       <style jsx global>{`
+        html.exam-fullscreen-mode nav,
+        html.exam-fullscreen-mode header,
+        html.exam-fullscreen-mode footer,
+        html.exam-fullscreen-mode .navbar,
+        html.exam-fullscreen-mode .top-notification,
+        html.exam-fullscreen-mode .TopNotification,
+        html.exam-fullscreen-mode .footer,
         body.exam-fullscreen-mode nav,
         body.exam-fullscreen-mode header,
         body.exam-fullscreen-mode footer,
@@ -1162,15 +1221,23 @@ export default function FundamentalTestPage() {
           display: none !important;
         }
 
+        html.exam-fullscreen-mode,
         body.exam-fullscreen-mode {
           margin: 0 !important;
           padding: 0 !important;
-          overflow-x: hidden !important;
+          overflow: hidden !important;
         }
 
+        html.exam-fullscreen-mode .examPage,
         body.exam-fullscreen-mode .examPage {
+          position: fixed !important;
+          inset: 0 !important;
+          width: 100vw !important;
+          height: 100vh !important;
           min-height: 100vh !important;
-          padding-top: 8px !important;
+          z-index: 999999 !important;
+          padding: 8px 10px 12px !important;
+          overflow-y: auto !important;
         }
       `}</style>
     </main>

@@ -22,7 +22,7 @@ export default function OnlineTestPage() {
   const correctPasscode = "44210101";
 
   // ✅ इथे जी test active करायची आहे तिचा id add करा
-  const activeTestIds = ["fundamental"];
+  const activeTestIds = ["word", "excel", "powerpoint"];
 
   const theoryTests: TestUnit[] = [
     {
@@ -65,22 +65,22 @@ export default function OnlineTestPage() {
 
   const practicalTests: TestUnit[] = [
     {
-      id: "ms-word-practical",
+      id: "word",
       title: "MS Word Test",
       subTitle: "Document typing, formatting, table and page setup.",
-      href: "/online-test/practical/ms-word",
+      href: "/online-test/practical/word",
     },
     {
-      id: "ms-excel-practical",
+      id: "excel",
       title: "MS Excel Test",
       subTitle: "Marksheet, formula, sorting, formatting and chart.",
-      href: "/online-test/practical/ms-excel",
+      href: "/online-test/practical/excel",
     },
     {
-      id: "ms-powerpoint-practical",
+      id: "powerpoint",
       title: "MS Power Point Test",
       subTitle: "Presentation creation, slide design, animation and transition.",
-      href: "/online-test/practical/ms-powerpoint",
+      href: "/online-test/practical/powerpoint",
     },
     {
       id: "windows-practical",

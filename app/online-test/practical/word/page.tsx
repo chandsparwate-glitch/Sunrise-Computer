@@ -31,262 +31,405 @@ type SubmittedAnswer = {
 
 const questionBank: Question[] = [
   {
-    question: { mr: "Computer म्हणजे काय?", en: "What is a computer?" },
+    question: { mr: "MS Word हे कशासाठी वापरले जाते?", en: "MS Word हे कशासाठी वापरले जाते?" },
     options: {
-      mr: ["फक्त टायपिंग करणारे यंत्र", "डेटा स्वीकारून प्रक्रिया करून माहिती देणारे इलेक्ट्रॉनिक यंत्र", "फक्त गेम खेळण्यासाठी वापरले जाणारे यंत्र", "फक्त इंटरनेट वापरण्याचे साधन"],
-      en: ["A device used only for typing", "An electronic device that accepts data, processes it, and gives information", "A device used only for games", "A device used only for internet"],
+      mr: ["चित्र काढण्यासाठी", "डॉक्युमेंट तयार करण्यासाठी", "गाणी ऐकण्यासाठी", "व्हिडिओ पाहण्यासाठी"],
+      en: ["चित्र काढण्यासाठी", "डॉक्युमेंट तयार करण्यासाठी", "गाणी ऐकण्यासाठी", "व्हिडिओ पाहण्यासाठी"],
     },
-    answer: { mr: "डेटा स्वीकारून प्रक्रिया करून माहिती देणारे इलेक्ट्रॉनिक यंत्र", en: "An electronic device that accepts data, processes it, and gives information" },
+    answer: { mr: "डॉक्युमेंट तयार करण्यासाठी", en: "डॉक्युमेंट तयार करण्यासाठी" },
   },
   {
-    question: { mr: "Computer चा मेंदू कोणता भाग मानला जातो?", en: "Which part is known as the brain of the computer?" },
-    options: { mr: ["Monitor", "Keyboard", "CPU", "Mouse"], en: ["Monitor", "Keyboard", "CPU", "Mouse"] },
-    answer: { mr: "CPU", en: "CPU" },
-  },
-  {
-    question: { mr: "खालीलपैकी Input Device कोणते आहे?", en: "Which of the following is an input device?" },
-    options: { mr: ["Monitor", "Printer", "Keyboard", "Speaker"], en: ["Monitor", "Printer", "Keyboard", "Speaker"] },
-    answer: { mr: "Keyboard", en: "Keyboard" },
-  },
-  {
-    question: { mr: "खालीलपैकी Output Device कोणते आहे?", en: "Which of the following is an output device?" },
-    options: { mr: ["Mouse", "Keyboard", "Scanner", "Monitor"], en: ["Mouse", "Keyboard", "Scanner", "Monitor"] },
-    answer: { mr: "Monitor", en: "Monitor" },
-  },
-  {
-    question: { mr: "Information Technology म्हणजे काय?", en: "What is Information Technology?" },
+    question: { mr: "MS Word मध्ये नवीन डॉक्युमेंट तयार करण्यासाठी कोणता पर्याय वापरतात?", en: "MS Word मध्ये नवीन डॉक्युमेंट तयार करण्यासाठी कोणता पर्याय वापरतात?" },
     options: {
-      mr: ["फक्त मोबाईल वापरणे", "माहिती तयार करणे, साठवणे, प्रक्रिया करणे आणि पाठवणे यासाठी तंत्रज्ञानाचा वापर", "फक्त गेम खेळणे", "फक्त चित्र काढणे"],
-      en: ["Only using mobile phones", "Use of technology to create, store, process, and transmit information", "Only playing games", "Only drawing pictures"],
+      mr: ["Open", "Save", "New", "Print"],
+      en: ["Open", "Save", "New", "Print"],
     },
-    answer: { mr: "माहिती तयार करणे, साठवणे, प्रक्रिया करणे आणि पाठवणे यासाठी तंत्रज्ञानाचा वापर", en: "Use of technology to create, store, process, and transmit information" },
+    answer: { mr: "New", en: "New" },
   },
   {
-    question: { mr: "पहिल्या पिढीतील Computer मध्ये कोणत्या तंत्रज्ञानाचा वापर झाला?", en: "Which technology was used in first generation computers?" },
-    options: { mr: ["Transistor", "Vacuum Tube", "Microprocessor", "Artificial Intelligence"], en: ["Transistor", "Vacuum Tube", "Microprocessor", "Artificial Intelligence"] },
-    answer: { mr: "Vacuum Tube", en: "Vacuum Tube" },
+    question: { mr: "Page Border घालण्यासाठी कोणता tab वापरतात?", en: "Page Border घालण्यासाठी कोणता tab वापरतात?" },
+    options: {
+      mr: ["Design", "Insert", "Layout", "Help"],
+      en: ["Design", "Insert", "Layout", "Help"],
+    },
+    answer: { mr: "Design", en: "Design" },
   },
   {
-    question: { mr: "दुसऱ्या पिढीतील Computer मध्ये कोणत्या तंत्रज्ञानाचा वापर झाला?", en: "Which technology was used in second generation computers?" },
-    options: { mr: ["Vacuum Tube", "Transistor", "IC", "Microprocessor"], en: ["Vacuum Tube", "Transistor", "IC", "Microprocessor"] },
-    answer: { mr: "Transistor", en: "Transistor" },
+    question: { mr: "Word फाईलचा Extension काय आहे?", en: "Word फाईलचा Extension काय आहे?" },
+    options: {
+      mr: [".xlsx", ".doc", ".pptx", ".docx"],
+      en: [".xlsx", ".doc", ".pptx", ".docx"],
+    },
+    answer: { mr: ".docx", en: ".docx" },
   },
   {
-    question: { mr: "तिसऱ्या पिढीतील Computer मध्ये कोणत्या तंत्रज्ञानाचा वापर झाला?", en: "Which technology was used in third generation computers?" },
-    options: { mr: ["IC", "Vacuum Tube", "Punch Card", "AI"], en: ["IC", "Vacuum Tube", "Punch Card", "AI"] },
-    answer: { mr: "IC", en: "IC" },
+    question: { mr: "Text जाड करण्यासाठी कोणता पर्याय वापरतात?", en: "Text जाड करण्यासाठी कोणता पर्याय वापरतात?" },
+    options: {
+      mr: ["Italic", "Underline", "Bold", "Left"],
+      en: ["Italic", "Underline", "Bold", "Left"],
+    },
+    answer: { mr: "Bold", en: "Bold" },
   },
   {
-    question: { mr: "चौथ्या पिढीतील Computer मध्ये कोणत्या तंत्रज्ञानाचा वापर झाला?", en: "Which technology was used in fourth generation computers?" },
-    options: { mr: ["Microprocessor", "Vacuum Tube", "Transistor", "Mechanical Gear"], en: ["Microprocessor", "Vacuum Tube", "Transistor", "Mechanical Gear"] },
-    answer: { mr: "Microprocessor", en: "Microprocessor" },
+    question: { mr: "Rectangle Shape घालण्यासाठी कोणता tab वापरतात?", en: "Rectangle Shape घालण्यासाठी कोणता tab वापरतात?" },
+    options: {
+      mr: ["Design", "Insert", "Layout", "Help"],
+      en: ["Design", "Insert", "Layout", "Help"],
+    },
+    answer: { mr: "Insert", en: "Insert" },
   },
   {
-    question: { mr: "पाचव्या पिढीतील Computer कोणत्या तंत्रज्ञानाशी संबंधित आहे?", en: "Fifth generation computers are related to which technology?" },
-    options: { mr: ["Artificial Intelligence", "Vacuum Tube", "Abacus", "Typewriter"], en: ["Artificial Intelligence", "Vacuum Tube", "Abacus", "Typewriter"] },
-    answer: { mr: "Artificial Intelligence", en: "Artificial Intelligence" },
+    question: { mr: "Text तिरपा करण्यासाठी कोणता पर्याय वापरतात?", en: "Text तिरपा करण्यासाठी कोणता पर्याय वापरतात?" },
+    options: {
+      mr: ["Italic", "Underline", "Bold", "Left"],
+      en: ["Italic", "Underline", "Bold", "Left"],
+    },
+    answer: { mr: "Italic", en: "Italic" },
   },
   {
-    question: { mr: "Super Computer चा उपयोग कशासाठी होतो?", en: "What is a supercomputer used for?" },
-    options: { mr: ["सामान्य टायपिंगसाठी", "अतिशय वेगवान आणि मोठ्या गणनांसाठी", "फक्त संगीत ऐकण्यासाठी", "फक्त फोटो पाहण्यासाठी"], en: ["For normal typing", "For very fast and large calculations", "Only for listening to music", "Only for viewing photos"] },
-    answer: { mr: "अतिशय वेगवान आणि मोठ्या गणनांसाठी", en: "For very fast and large calculations" },
-  },
-  {
-    question: { mr: "Personal Computer ला संक्षिप्त रूपात काय म्हणतात?", en: "What is the short form of Personal Computer?" },
-    options: { mr: ["PC", "CPU", "UPS", "RAM"], en: ["PC", "CPU", "UPS", "RAM"] },
-    answer: { mr: "PC", en: "PC" },
-  },
-  {
-    question: { mr: "Laptop हा कोणत्या प्रकारचा Computer आहे?", en: "Laptop is which type of computer?" },
-    options: { mr: ["Portable Computer", "Super Computer", "Mainframe Computer", "Analog Computer"], en: ["Portable Computer", "Super Computer", "Mainframe Computer", "Analog Computer"] },
-    answer: { mr: "Portable Computer", en: "Portable Computer" },
-  },
-  {
-    question: { mr: "Hardware म्हणजे काय?", en: "What is hardware?" },
-    options: { mr: ["Computer चे स्पर्श करता येणारे भाग", "Computer मधील सूचना", "Internet service", "फक्त MS Word"], en: ["Physical parts of a computer", "Instructions in a computer", "Internet service", "Only MS Word"] },
-    answer: { mr: "Computer चे स्पर्श करता येणारे भाग", en: "Physical parts of a computer" },
-  },
-  {
-    question: { mr: "Software म्हणजे काय?", en: "What is software?" },
-    options: { mr: ["Computer चे physical parts", "Computer ला काम करण्यासाठी दिलेल्या सूचना / programs", "फक्त monitor", "फक्त keyboard"], en: ["Physical parts of computer", "Instructions or programs given to a computer", "Only monitor", "Only keyboard"] },
-    answer: { mr: "Computer ला काम करण्यासाठी दिलेल्या सूचना / programs", en: "Instructions or programs given to a computer" },
-  },
-  {
-    question: { mr: "Operating System चे उदाहरण कोणते?", en: "Which is an example of an operating system?" },
-    options: { mr: ["Windows", "Keyboard", "Printer", "Mouse"], en: ["Windows", "Keyboard", "Printer", "Mouse"] },
-    answer: { mr: "Windows", en: "Windows" },
-  },
-  {
-    question: { mr: "RAM चे full form काय आहे?", en: "What is the full form of RAM?" },
-    options: { mr: ["Read Access Memory", "Random Access Memory", "Run Access Machine", "Read Automatic Memory"], en: ["Read Access Memory", "Random Access Memory", "Run Access Machine", "Read Automatic Memory"] },
-    answer: { mr: "Random Access Memory", en: "Random Access Memory" },
-  },
-  {
-    question: { mr: "ROM चे full form काय आहे?", en: "What is the full form of ROM?" },
-    options: { mr: ["Read Only Memory", "Random Only Memory", "Run Only Machine", "Read Output Memory"], en: ["Read Only Memory", "Random Only Memory", "Run Only Machine", "Read Output Memory"] },
-    answer: { mr: "Read Only Memory", en: "Read Only Memory" },
-  },
-  {
-    question: { mr: "Data म्हणजे काय?", en: "What is data?" },
-    options: { mr: ["अर्थपूर्ण माहिती", "कच्चे तथ्य आणि आकडे", "फक्त चित्र", "फक्त आवाज"], en: ["Meaningful information", "Raw facts and figures", "Only picture", "Only sound"] },
-    answer: { mr: "कच्चे तथ्य आणि आकडे", en: "Raw facts and figures" },
-  },
-  {
-    question: { mr: "Process केलेल्या data ला काय म्हणतात?", en: "What is processed data called?" },
-    options: { mr: ["Information", "Hardware", "Input", "Virus"], en: ["Information", "Hardware", "Input", "Virus"] },
-    answer: { mr: "Information", en: "Information" },
-  },
-  {
-    question: { mr: "Storage device चे उदाहरण कोणते?", en: "Which is an example of a storage device?" },
-    options: { mr: ["Pen Drive", "Monitor", "Keyboard", "Mouse"], en: ["Pen Drive", "Monitor", "Keyboard", "Mouse"] },
-    answer: { mr: "Pen Drive", en: "Pen Drive" },
-  },
-  {
-    question: { mr: "Computer Virus म्हणजे काय?", en: "What is a computer virus?" },
-    options: { mr: ["उपयोगी program", "Computer ला नुकसान करणारा program", "Printer चा भाग", "Monitor चे button"], en: ["Useful program", "A program that can harm the computer", "Part of printer", "Button of monitor"] },
-    answer: { mr: "Computer ला नुकसान करणारा program", en: "A program that can harm the computer" },
-  },
-  {
-    question: { mr: "Antivirus software कशासाठी वापरतात?", en: "What is antivirus software used for?" },
-    options: { mr: ["Virus पासून संरक्षणासाठी", "Typing speed वाढवण्यासाठी", "Monitor चालू करण्यासाठी", "Printer साफ करण्यासाठी"], en: ["To protect from viruses", "To increase typing speed", "To turn on monitor", "To clean printer"] },
-    answer: { mr: "Virus पासून संरक्षणासाठी", en: "To protect from viruses" },
-  },
-  {
-    question: { mr: "Internet म्हणजे काय?", en: "What is the Internet?" },
-    options: { mr: ["Computer चे आतले भाग", "जगभरातील computers चे network", "फक्त game", "फक्त keyboard"], en: ["Internal parts of computer", "A worldwide network of computers", "Only game", "Only keyboard"] },
-    answer: { mr: "जगभरातील computers चे network", en: "A worldwide network of computers" },
-  },
-  {
-    question: { mr: "Browser चे उदाहरण कोणते?", en: "Which is an example of a browser?" },
-    options: { mr: ["Google Chrome", "MS Paint", "Calculator", "Notepad"], en: ["Google Chrome", "MS Paint", "Calculator", "Notepad"] },
-    answer: { mr: "Google Chrome", en: "Google Chrome" },
-  },
-  {
-    question: { mr: "Computer चे मुख्य कार्य कोणते?", en: "What are the main functions of a computer?" },
-    options: { mr: ["Input, Process, Output, Storage", "Only Printing", "Only Typing", "Only Gaming"], en: ["Input, Process, Output, Storage", "Only Printing", "Only Typing", "Only Gaming"] },
-    answer: { mr: "Input, Process, Output, Storage", en: "Input, Process, Output, Storage" },
-  },
-  {
-    question: { mr: "ALU चे full form काय आहे?", en: "What is the full form of ALU?" },
-    options: { mr: ["Arithmetic Logic Unit", "Automatic Logic Unit", "Advanced Link Unit", "Array Logic Unit"], en: ["Arithmetic Logic Unit", "Automatic Logic Unit", "Advanced Link Unit", "Array Logic Unit"] },
-    answer: { mr: "Arithmetic Logic Unit", en: "Arithmetic Logic Unit" },
-  },
-  {
-    question: { mr: "CU चे full form काय आहे?", en: "What is the full form of CU?" },
-    options: { mr: ["Control Unit", "Computer Unit", "Central User", "Code Unit"], en: ["Control Unit", "Computer Unit", "Central User", "Code Unit"] },
-    answer: { mr: "Control Unit", en: "Control Unit" },
-  },
-  {
-    question: { mr: "1 KB मध्ये किती bytes असतात?", en: "How many bytes are there in 1 KB?" },
-    options: { mr: ["1000 bytes", "1024 bytes", "512 bytes", "2048 bytes"], en: ["1000 bytes", "1024 bytes", "512 bytes", "2048 bytes"] },
-    answer: { mr: "1024 bytes", en: "1024 bytes" },
-  },
-  {
-    question: { mr: "1 MB मध्ये किती KB असतात?", en: "How many KB are there in 1 MB?" },
-    options: { mr: ["100 KB", "512 KB", "1024 KB", "2048 KB"], en: ["100 KB", "512 KB", "1024 KB", "2048 KB"] },
-    answer: { mr: "1024 KB", en: "1024 KB" },
-  },
-  {
-    question: { mr: "Bit म्हणजे काय?", en: "What is a bit?" },
-    options: { mr: ["Binary Digit", "Byte Input Tool", "Basic Internet Tag", "Backup Item"], en: ["Binary Digit", "Byte Input Tool", "Basic Internet Tag", "Backup Item"] },
-    answer: { mr: "Binary Digit", en: "Binary Digit" },
-  },
-  {
-    question: { mr: "Byte मध्ये किती bits असतात?", en: "How many bits are there in one byte?" },
-    options: { mr: ["4", "8", "16", "32"], en: ["4", "8", "16", "32"] },
+    question: { mr: "MS Word मध्ये Font Size box मध्ये दिसणारा लहान font size कोणता असतो?", en: "MS Word मध्ये Font Size box मध्ये दिसणारा लहान font size कोणता असतो?" },
+    options: {
+      mr: ["6", "8", "10", "12"],
+      en: ["6", "8", "10", "12"],
+    },
     answer: { mr: "8", en: "8" },
   },
   {
-    question: { mr: "Primary memory चे उदाहरण कोणते?", en: "Which is an example of primary memory?" },
-    options: { mr: ["RAM", "Hard Disk", "DVD", "Pen Drive"], en: ["RAM", "Hard Disk", "DVD", "Pen Drive"] },
-    answer: { mr: "RAM", en: "RAM" },
+    question: { mr: "MS Word मध्ये Zoom, Ruler आणि Document View हे पर्याय कोणत्या tab मध्ये असतात?", en: "MS Word मध्ये Zoom, Ruler आणि Document View हे पर्याय कोणत्या tab मध्ये असतात?" },
+    options: {
+      mr: ["Design", "Insert", "Layout", "View"],
+      en: ["Design", "Insert", "Layout", "View"],
+    },
+    answer: { mr: "View", en: "View" },
   },
   {
-    question: { mr: "Secondary storage चे उदाहरण कोणते?", en: "Which is an example of secondary storage?" },
-    options: { mr: ["RAM", "Cache", "Hard Disk", "Register"], en: ["RAM", "Cache", "Hard Disk", "Register"] },
-    answer: { mr: "Hard Disk", en: "Hard Disk" },
+    question: { mr: "Table घालण्यासाठी कोणता tab वापरतात?", en: "Table घालण्यासाठी कोणता tab वापरतात?" },
+    options: {
+      mr: ["Design", "Insert", "Layout", "Help"],
+      en: ["Design", "Insert", "Layout", "Help"],
+    },
+    answer: { mr: "Insert", en: "Insert" },
   },
   {
-    question: { mr: "Scanner हे कोणत्या प्रकारचे device आहे?", en: "Scanner is which type of device?" },
-    options: { mr: ["Input Device", "Output Device", "Storage Device", "Processing Device"], en: ["Input Device", "Output Device", "Storage Device", "Processing Device"] },
-    answer: { mr: "Input Device", en: "Input Device" },
+    question: { mr: "Copy करण्यासाठी कोणती shortcut key वापरतात?", en: "Copy करण्यासाठी कोणती shortcut key वापरतात?" },
+    options: {
+      mr: ["Ctrl + V", "Ctrl + C", "Ctrl + X", "Ctrl + P"],
+      en: ["Ctrl + V", "Ctrl + C", "Ctrl + X", "Ctrl + P"],
+    },
+    answer: { mr: "Ctrl + C", en: "Ctrl + C" },
   },
   {
-    question: { mr: "Printer हे कोणत्या प्रकारचे device आहे?", en: "Printer is which type of device?" },
-    options: { mr: ["Input Device", "Output Device", "Processing Device", "Memory Device"], en: ["Input Device", "Output Device", "Processing Device", "Memory Device"] },
-    answer: { mr: "Output Device", en: "Output Device" },
+    question: { mr: "Paste करण्यासाठी कोणती shortcut key वापरतात?", en: "Paste करण्यासाठी कोणती shortcut key वापरतात?" },
+    options: {
+      mr: ["Ctrl + C", "Ctrl + V", "Ctrl + X", "Ctrl + S"],
+      en: ["Ctrl + C", "Ctrl + V", "Ctrl + X", "Ctrl + S"],
+    },
+    answer: { mr: "Ctrl + V", en: "Ctrl + V" },
   },
   {
-    question: { mr: "Touch Screen हे कोणत्या प्रकारचे device आहे?", en: "Touch screen is which type of device?" },
-    options: { mr: ["फक्त Input", "फक्त Output", "Input आणि Output दोन्ही", "Storage"], en: ["Only Input", "Only Output", "Both Input and Output", "Storage"] },
-    answer: { mr: "Input आणि Output दोन्ही", en: "Both Input and Output" },
+    question: { mr: "चुकून delete झालेले परत आणण्यासाठी कोणता पर्याय वापरतात?", en: "चुकून delete झालेले परत आणण्यासाठी कोणता पर्याय वापरतात?" },
+    options: {
+      mr: ["Undo", "Redo", "Copy", "Delete"],
+      en: ["Undo", "Redo", "Copy", "Delete"],
+    },
+    answer: { mr: "Undo", en: "Undo" },
   },
   {
-    question: { mr: "System Software चे उदाहरण कोणते?", en: "Which is an example of system software?" },
-    options: { mr: ["Operating System", "MS Word Document", "Photo", "Video File"], en: ["Operating System", "MS Word Document", "Photo", "Video File"] },
-    answer: { mr: "Operating System", en: "Operating System" },
+    question: { mr: "Page Size साठी कोणता tab वापरतात?", en: "Page Size साठी कोणता tab वापरतात?" },
+    options: {
+      mr: ["Design", "Insert", "Layout", "Help"],
+      en: ["Design", "Insert", "Layout", "Help"],
+    },
+    answer: { mr: "Layout", en: "Layout" },
   },
   {
-    question: { mr: "Application Software चे उदाहरण कोणते?", en: "Which is an example of application software?" },
-    options: { mr: ["Windows", "MS Word", "BIOS", "Device Driver"], en: ["Windows", "MS Word", "BIOS", "Device Driver"] },
-    answer: { mr: "MS Word", en: "MS Word" },
+    question: { mr: "MS Word मध्ये एकूण किती मुख्य alignment प्रकार असतात?", en: "MS Word मध्ये एकूण किती मुख्य alignment प्रकार असतात?" },
+    options: {
+      mr: ["2", "3", "4", "5"],
+      en: ["2", "3", "4", "5"],
+    },
+    answer: { mr: "4", en: "4" },
   },
   {
-    question: { mr: "GUI चे full form काय आहे?", en: "What is the full form of GUI?" },
-    options: { mr: ["Graphical User Interface", "General User Internet", "Graphic Unit Input", "Global User Interface"], en: ["Graphical User Interface", "General User Internet", "Graphic Unit Input", "Global User Interface"] },
-    answer: { mr: "Graphical User Interface", en: "Graphical User Interface" },
+    question: { mr: "MS Word मधील Change Case पर्यायाचा उपयोग कशासाठी केला जातो?", en: "MS Word मधील Change Case पर्यायाचा उपयोग कशासाठी केला जातो?" },
+    options: {
+      mr: ["अक्षरांचा आकार बदलण्यासाठी", "अक्षरे मोठी-लहान करण्यासाठी", "चित्र insert करण्यासाठी", "Page Color बदलण्यासाठी"],
+      en: ["अक्षरांचा आकार बदलण्यासाठी", "अक्षरे मोठी-लहान करण्यासाठी", "चित्र insert करण्यासाठी", "Page Color बदलण्यासाठी"],
+    },
+    answer: { mr: "अक्षरे मोठी-लहान करण्यासाठी", en: "अक्षरे मोठी-लहान करण्यासाठी" },
   },
   {
-    question: { mr: "CLI चे full form काय आहे?", en: "What is the full form of CLI?" },
-    options: { mr: ["Command Line Interface", "Computer Logic Input", "Central Link Internet", "Control Language Item"], en: ["Command Line Interface", "Computer Logic Input", "Central Link Internet", "Control Language Item"] },
-    answer: { mr: "Command Line Interface", en: "Command Line Interface" },
+    question: { mr: "Paragraph च्या दोन्ही बाजू सरळ दिसण्यासाठी कोणता alignment वापरतात?", en: "Paragraph च्या दोन्ही बाजू सरळ दिसण्यासाठी कोणता alignment वापरतात?" },
+    options: {
+      mr: ["Left", "Right", "Center", "Justify"],
+      en: ["Left", "Right", "Center", "Justify"],
+    },
+    answer: { mr: "Justify", en: "Justify" },
   },
   {
-    question: { mr: "Booting म्हणजे काय?", en: "What is booting?" },
-    options: { mr: ["Computer सुरू होण्याची प्रक्रिया", "File delete करणे", "Printer चालू करणे", "Internet बंद करणे"], en: ["The process of starting a computer", "Deleting a file", "Starting a printer", "Turning off internet"] },
-    answer: { mr: "Computer सुरू होण्याची प्रक्रिया", en: "The process of starting a computer" },
+    question: { mr: "यादी तयार करण्यासाठी कोणता पर्याय वापरतात?", en: "यादी तयार करण्यासाठी कोणता पर्याय वापरतात?" },
+    options: {
+      mr: ["Bullets and Numbering", "Print", "Save As", "Close"],
+      en: ["Bullets and Numbering", "Print", "Save As", "Close"],
+    },
+    answer: { mr: "Bullets and Numbering", en: "Bullets and Numbering" },
   },
   {
-    question: { mr: "Cold Boot म्हणजे काय?", en: "What is cold boot?" },
-    options: { mr: ["Computer बंद अवस्थेतून सुरू करणे", "Restart करणे", "Sleep mode", "Virus scan"], en: ["Starting computer from power off state", "Restarting", "Sleep mode", "Virus scan"] },
-    answer: { mr: "Computer बंद अवस्थेतून सुरू करणे", en: "Starting computer from power off state" },
+    question: { mr: "MS Word मध्ये मजकुराचा रंग बदलण्यासाठी कोणता पर्याय वापरला जातो?", en: "MS Word मध्ये मजकुराचा रंग बदलण्यासाठी कोणता पर्याय वापरला जातो?" },
+    options: {
+      mr: ["Font Color", "Font Size", "Bold", "Underline"],
+      en: ["Font Color", "Font Size", "Bold", "Underline"],
+    },
+    answer: { mr: "Font Color", en: "Font Color" },
   },
   {
-    question: { mr: "Warm Boot म्हणजे काय?", en: "What is warm boot?" },
-    options: { mr: ["Computer restart करणे", "Computer permanently बंद करणे", "New file create करणे", "Mouse connect करणे"], en: ["Restarting the computer", "Shutting down permanently", "Creating a new file", "Connecting mouse"] },
-    answer: { mr: "Computer restart करणे", en: "Restarting the computer" },
+    question: { mr: "स्पेलिंग चुका तपासण्यासाठी कोणता पर्याय उपयुक्त आहे?", en: "स्पेलिंग चुका तपासण्यासाठी कोणता पर्याय उपयुक्त आहे?" },
+    options: {
+      mr: ["Spelling & Grammar", "Cut", "Paste", "Zoom"],
+      en: ["Spelling & Grammar", "Cut", "Paste", "Zoom"],
+    },
+    answer: { mr: "Spelling & Grammar", en: "Spelling & Grammar" },
   },
   {
-    question: { mr: "BIOS चा उपयोग कशासाठी होतो?", en: "What is BIOS used for?" },
-    options: { mr: ["Computer सुरू होताना hardware तपासण्यासाठी", "Only typing", "Only printing", "Only drawing"], en: ["To check hardware while starting computer", "Only typing", "Only printing", "Only drawing"] },
-    answer: { mr: "Computer सुरू होताना hardware तपासण्यासाठी", en: "To check hardware while starting computer" },
+    question: { mr: "खालीलपैकी कोणता Change Case चा प्रकार नाही?", en: "खालीलपैकी कोणता Change Case चा प्रकार नाही?" },
+    options: {
+      mr: ["UPPERCASE", "lowercase", "Boldcase", "Sentence case"],
+      en: ["UPPERCASE", "lowercase", "Boldcase", "Sentence case"],
+    },
+    answer: { mr: "Boldcase", en: "Boldcase" },
   },
   {
-    question: { mr: "CPU मध्ये कोणते भाग असतात?", en: "Which parts are included in CPU?" },
-    options: { mr: ["ALU आणि CU", "Monitor आणि Keyboard", "Mouse आणि Printer", "Speaker आणि Scanner"], en: ["ALU and CU", "Monitor and Keyboard", "Mouse and Printer", "Speaker and Scanner"] },
-    answer: { mr: "ALU आणि CU", en: "ALU and CU" },
+    question: { mr: "“Ram” हा शब्द “Shyam” ने बदलण्यासाठी काय वापराल?", en: "“Ram” हा शब्द “Shyam” ने बदलण्यासाठी काय वापराल?" },
+    options: {
+      mr: ["Find only", "Replace", "Save", "Undo"],
+      en: ["Find only", "Replace", "Save", "Undo"],
+    },
+    answer: { mr: "Replace", en: "Replace" },
   },
   {
-    question: { mr: "Cache Memory कशी असते?", en: "What type of memory is cache memory?" },
-    options: { mr: ["खूप वेगवान memory", "खूप slow memory", "फक्त बाह्य storage", "Printer memory"], en: ["Very fast memory", "Very slow memory", "Only external storage", "Printer memory"] },
-    answer: { mr: "खूप वेगवान memory", en: "Very fast memory" },
+    question: { mr: "एखादा चुकीचा शब्द काढून टाकल्यासारखा दाखवण्यासाठी कोणता option उपयोगी आहे?", en: "एखादा चुकीचा शब्द काढून टाकल्यासारखा दाखवण्यासाठी कोणता option उपयोगी आहे?" },
+    options: {
+      mr: ["Underline", "Strikethrough", "Superscript", "Font Color"],
+      en: ["Underline", "Strikethrough", "Superscript", "Font Color"],
+    },
+    answer: { mr: "Strikethrough", en: "Strikethrough" },
   },
   {
-    question: { mr: "Analog Computer कोणत्या data वर काम करतो?", en: "Analog computer works on which type of data?" },
-    options: { mr: ["Continuous data", "Only text", "Only images", "Only folders"], en: ["Continuous data", "Only text", "Only images", "Only folders"] },
-    answer: { mr: "Continuous data", en: "Continuous data" },
+    question: { mr: "Table मध्ये आडव्या भागांना काय म्हणतात?", en: "Table मध्ये आडव्या भागांना काय म्हणतात?" },
+    options: {
+      mr: ["Rows", "Columns", "Margins", "Tabs"],
+      en: ["Rows", "Columns", "Margins", "Tabs"],
+    },
+    answer: { mr: "Rows", en: "Rows" },
   },
   {
-    question: { mr: "Digital Computer कोणत्या data वर काम करतो?", en: "Digital computer works on which type of data?" },
-    options: { mr: ["Discrete/Binary data", "Only sound", "Only temperature", "Only pressure"], en: ["Discrete/Binary data", "Only sound", "Only temperature", "Only pressure"] },
-    answer: { mr: "Discrete/Binary data", en: "Discrete/Binary data" },
+    question: { mr: "खालीलपैकी कोणता एक Paper Size आहे?", en: "खालीलपैकी कोणता एक Paper Size आहे?" },
+    options: {
+      mr: ["A4", "Bold", "Underline", "Zoom"],
+      en: ["A4", "Bold", "Underline", "Zoom"],
+    },
+    answer: { mr: "A4", en: "A4" },
   },
   {
-    question: { mr: "Hybrid Computer मध्ये कोणत्या computer चे गुण असतात?", en: "Hybrid computer has features of which computers?" },
-    options: { mr: ["Analog आणि Digital", "Only Digital", "Only Analog", "Only Manual"], en: ["Analog and Digital", "Only Digital", "Only Analog", "Only Manual"] },
-    answer: { mr: "Analog आणि Digital", en: "Analog and Digital" },
+    question: { mr: "Header घालण्यासाठी कोणता tab वापरतात?", en: "Header घालण्यासाठी कोणता tab वापरतात?" },
+    options: {
+      mr: ["Insert", "Design", "Layout", "View"],
+      en: ["Insert", "Design", "Layout", "View"],
+    },
+    answer: { mr: "Insert", en: "Insert" },
   },
-
+  {
+    question: { mr: "Footer म्हणजे काय?", en: "Footer म्हणजे काय?" },
+    options: {
+      mr: ["Page च्या वरचा भाग", "Page च्या खालचा भाग", "Page मधील चित्र", "Page चा रंग"],
+      en: ["Page च्या वरचा भाग", "Page च्या खालचा भाग", "Page मधील चित्र", "Page चा रंग"],
+    },
+    answer: { mr: "Page च्या खालचा भाग", en: "Page च्या खालचा भाग" },
+  },
+  {
+    question: { mr: "Page Number घालण्यासाठी कोणता tab वापरतात?", en: "Page Number घालण्यासाठी कोणता tab वापरतात?" },
+    options: {
+      mr: ["Insert", "Home", "Review", "View"],
+      en: ["Insert", "Home", "Review", "View"],
+    },
+    answer: { mr: "Insert", en: "Insert" },
+  },
+  {
+    question: { mr: "Header मध्ये साधारणपणे काय लिहिले जाते?", en: "Header मध्ये साधारणपणे काय लिहिले जाते?" },
+    options: {
+      mr: ["Page च्या वर दिसणारी माहिती", "फक्त चित्र", "फक्त Table", "फक्त Formula"],
+      en: ["Page च्या वर दिसणारी माहिती", "फक्त चित्र", "फक्त Table", "फक्त Formula"],
+    },
+    answer: { mr: "Page च्या वर दिसणारी माहिती", en: "Page च्या वर दिसणारी माहिती" },
+  },
+  {
+    question: { mr: "Footer मध्ये साधारणपणे काय टाकतात?", en: "Footer मध्ये साधारणपणे काय टाकतात?" },
+    options: {
+      mr: ["Page Number", "Font Size", "Bold", "Cut"],
+      en: ["Page Number", "Font Size", "Bold", "Cut"],
+    },
+    answer: { mr: "Page Number", en: "Page Number" },
+  },
+  {
+    question: { mr: "Margin म्हणजे काय?", en: "Margin म्हणजे काय?" },
+    options: {
+      mr: ["Page च्या कडेला असलेली रिकामी जागा", "Text चा रंग", "Font चा प्रकार", "Table ची row"],
+      en: ["Page च्या कडेला असलेली रिकामी जागा", "Text चा रंग", "Font चा प्रकार", "Table ची row"],
+    },
+    answer: { mr: "Page च्या कडेला असलेली रिकामी जागा", en: "Page च्या कडेला असलेली रिकामी जागा" },
+  },
+  {
+    question: { mr: "Margin बदलण्यासाठी कोणता tab वापरतात?", en: "Margin बदलण्यासाठी कोणता tab वापरतात?" },
+    options: {
+      mr: ["Layout", "Insert", "Home", "Review"],
+      en: ["Layout", "Insert", "Home", "Review"],
+    },
+    answer: { mr: "Layout", en: "Layout" },
+  },
+  {
+    question: { mr: "MS Word मध्ये Normal, Narrow, Moderate हे कोणत्या option चे प्रकार आहेत?", en: "MS Word मध्ये Normal, Narrow, Moderate हे कोणत्या option चे प्रकार आहेत?" },
+    options: {
+      mr: ["Margin", "Font Color", "Header", "Zoom"],
+      en: ["Margin", "Font Color", "Header", "Zoom"],
+    },
+    answer: { mr: "Margin", en: "Margin" },
+  },
+  {
+    question: { mr: "Page Orientation बदलण्यासाठी कोणता tab वापरतात?", en: "Page Orientation बदलण्यासाठी कोणता tab वापरतात?" },
+    options: {
+      mr: ["Layout", "Home", "Insert", "File"],
+      en: ["Layout", "Home", "Insert", "File"],
+    },
+    answer: { mr: "Layout", en: "Layout" },
+  },
+  {
+    question: { mr: "Orientation चे मुख्य प्रकार किती आहेत?", en: "Orientation चे मुख्य प्रकार किती आहेत?" },
+    options: {
+      mr: ["1", "2", "3", "4"],
+      en: ["1", "2", "3", "4"],
+    },
+    answer: { mr: "2", en: "2" },
+  },
+  {
+    question: { mr: "Portrait Orientation म्हणजे काय?", en: "Portrait Orientation म्हणजे काय?" },
+    options: {
+      mr: ["Page उभा असतो", "Page आडवा असतो", "Page रंगीत असतो", "Page वर border असते"],
+      en: ["Page उभा असतो", "Page आडवा असतो", "Page रंगीत असतो", "Page वर border असते"],
+    },
+    answer: { mr: "Page उभा असतो", en: "Page उभा असतो" },
+  },
+  {
+    question: { mr: "Landscape Orientation म्हणजे काय?", en: "Landscape Orientation म्हणजे काय?" },
+    options: {
+      mr: ["Page उभा असतो", "Page आडवा असतो", "Page delete होतो", "Page save होतो"],
+      en: ["Page उभा असतो", "Page आडवा असतो", "Page delete होतो", "Page save होतो"],
+    },
+    answer: { mr: "Page आडवा असतो", en: "Page आडवा असतो" },
+  },
+  {
+    question: { mr: "Drop Cap चा उपयोग कशासाठी होतो?", en: "Drop Cap चा उपयोग कशासाठी होतो?" },
+    options: {
+      mr: ["Paragraph चे पहिले अक्षर मोठे दाखवण्यासाठी", "Page save करण्यासाठी", "Table delete करण्यासाठी", "Font color बदलण्यासाठी"],
+      en: ["Paragraph चे पहिले अक्षर मोठे दाखवण्यासाठी", "Page save करण्यासाठी", "Table delete करण्यासाठी", "Font color बदलण्यासाठी"],
+    },
+    answer: { mr: "Paragraph चे पहिले अक्षर मोठे दाखवण्यासाठी", en: "Paragraph चे पहिले अक्षर मोठे दाखवण्यासाठी" },
+  },
+  {
+    question: { mr: "Drop Cap कोणत्या tab मध्ये असतो?", en: "Drop Cap कोणत्या tab मध्ये असतो?" },
+    options: {
+      mr: ["Insert", "Home", "View", "Review"],
+      en: ["Insert", "Home", "View", "Review"],
+    },
+    answer: { mr: "Insert", en: "Insert" },
+  },
+  {
+    question: { mr: "Drop Cap साधारणपणे कुठे वापरतात?", en: "Drop Cap साधारणपणे कुठे वापरतात?" },
+    options: {
+      mr: ["Paragraph च्या सुरुवातीला", "Page च्या शेवटी", "Footer मध्येच", "File name मध्ये"],
+      en: ["Paragraph च्या सुरुवातीला", "Page च्या शेवटी", "Footer मध्येच", "File name मध्ये"],
+    },
+    answer: { mr: "Paragraph च्या सुरुवातीला", en: "Paragraph च्या सुरुवातीला" },
+  },
+  {
+    question: { mr: "Spelling & Grammar पर्याय कोणत्या tab मध्ये असतो?", en: "Spelling & Grammar पर्याय कोणत्या tab मध्ये असतो?" },
+    options: {
+      mr: ["Review", "Insert", "Layout", "Design"],
+      en: ["Review", "Insert", "Layout", "Design"],
+    },
+    answer: { mr: "Review", en: "Review" },
+  },
+  {
+    question: { mr: "Spelling & Grammar चा उपयोग कशासाठी होतो?", en: "Spelling & Grammar चा उपयोग कशासाठी होतो?" },
+    options: {
+      mr: ["शब्दलेखन व व्याकरण तपासण्यासाठी", "चित्र काढण्यासाठी", "Page orientation बदलण्यासाठी", "File बंद करण्यासाठी"],
+      en: ["शब्दलेखन व व्याकरण तपासण्यासाठी", "चित्र काढण्यासाठी", "Page orientation बदलण्यासाठी", "File बंद करण्यासाठी"],
+    },
+    answer: { mr: "शब्दलेखन व व्याकरण तपासण्यासाठी", en: "शब्दलेखन व व्याकरण तपासण्यासाठी" },
+  },
+  {
+    question: { mr: "चुकीच्या spelling खाली साधारणपणे कोणत्या रंगाची रेघ दिसते?", en: "चुकीच्या spelling खाली साधारणपणे कोणत्या रंगाची रेघ दिसते?" },
+    options: {
+      mr: ["लाल", "निळी", "हिरवी", "पिवळी"],
+      en: ["लाल", "निळी", "हिरवी", "पिवळी"],
+    },
+    answer: { mr: "लाल", en: "लाल" },
+  },
+  {
+    question: { mr: "MS Word मध्ये Ruler दाखवण्यासाठी कोणता tab वापरतात?", en: "MS Word मध्ये Ruler दाखवण्यासाठी कोणता tab वापरतात?" },
+    options: {
+      mr: ["View", "Insert", "Home", "File"],
+      en: ["View", "Insert", "Home", "File"],
+    },
+    answer: { mr: "View", en: "View" },
+  },
+  {
+    question: { mr: "Zoom option कोणत्या tab मध्ये असतो?", en: "Zoom option कोणत्या tab मध्ये असतो?" },
+    options: {
+      mr: ["View", "Design", "Layout", "Insert"],
+      en: ["View", "Design", "Layout", "Insert"],
+    },
+    answer: { mr: "View", en: "View" },
+  },
+  {
+    question: { mr: "Print Layout, Web Layout, Read Mode हे कोणत्या tab मधील पर्याय आहेत?", en: "Print Layout, Web Layout, Read Mode हे कोणत्या tab मधील पर्याय आहेत?" },
+    options: {
+      mr: ["View", "Home", "Review", "File"],
+      en: ["View", "Home", "Review", "File"],
+    },
+    answer: { mr: "View", en: "View" },
+  },
+  {
+    question: { mr: "Document मोठा किंवा लहान करून पाहण्यासाठी कोणता option वापरतात?", en: "Document मोठा किंवा लहान करून पाहण्यासाठी कोणता option वापरतात?" },
+    options: {
+      mr: ["Zoom", "Save", "Copy", "Cut"],
+      en: ["Zoom", "Save", "Copy", "Cut"],
+    },
+    answer: { mr: "Zoom", en: "Zoom" },
+  },
+  {
+    question: { mr: "View tab मधील Ruler option चा उपयोग कशासाठी होतो?", en: "View tab मधील Ruler option चा उपयोग कशासाठी होतो?" },
+    options: {
+      mr: ["Page वर मोजपट्टी दाखवण्यासाठी", "Text bold करण्यासाठी", "Page delete करण्यासाठी", "Table insert करण्यासाठी"],
+      en: ["Page वर मोजपट्टी दाखवण्यासाठी", "Text bold करण्यासाठी", "Page delete करण्यासाठी", "Table insert करण्यासाठी"],
+    },
+    answer: { mr: "Page वर मोजपट्टी दाखवण्यासाठी", en: "Page वर मोजपट्टी दाखवण्यासाठी" },
+  },
+  {
+    question: { mr: "Find option चा उपयोग कशासाठी होतो?", en: "Find option चा उपयोग कशासाठी होतो?" },
+    options: {
+      mr: ["शब्द शोधण्यासाठी", "Page print करण्यासाठी", "Font बदलण्यासाठी", "Border घालण्यासाठी"],
+      en: ["शब्द शोधण्यासाठी", "Page print करण्यासाठी", "Font बदलण्यासाठी", "Border घालण्यासाठी"],
+    },
+    answer: { mr: "शब्द शोधण्यासाठी", en: "शब्द शोधण्यासाठी" },
+  },
+  {
+    question: { mr: "Save As पर्यायाचा उपयोग कशासाठी होतो?", en: "Save As पर्यायाचा उपयोग कशासाठी होतो?" },
+    options: {
+      mr: ["फाईल नवीन नावाने save करण्यासाठी", "फाईल delete करण्यासाठी", "Text copy करण्यासाठी", "Page zoom करण्यासाठी"],
+      en: ["फाईल नवीन नावाने save करण्यासाठी", "फाईल delete करण्यासाठी", "Text copy करण्यासाठी", "Page zoom करण्यासाठी"],
+    },
+    answer: { mr: "फाईल नवीन नावाने save करण्यासाठी", en: "फाईल नवीन नावाने save करण्यासाठी" },
+  }
 ];
 
 const FINAL_TEST_QUESTION_COUNT = 25;
@@ -304,7 +447,7 @@ const createFinalTestQuestions = (): Question[] => {
   return shuffleArray(questionBank).slice(0, FINAL_TEST_QUESTION_COUNT);
 };
 
-export default function FundamentalTestPage() {
+export default function MSWordTestPage() {
   const [studentName, setStudentName] = useState("Student");
   const [language, setLanguage] = useState<Lang>("mr");
   const [batchTime, setBatchTime] = useState("");
@@ -371,7 +514,7 @@ export default function FundamentalTestPage() {
   }, [timeLeft, isFinished, examStarted]);
 
   const t = {
-    title: "Computer Fundamental Test",
+    title: "MS Word Test",
     startExam: "Start Exam",
     totalQuestions: language === "mr" ? "एकूण प्रश्न" : "Total Questions",
     eachQuestion: language === "mr" ? "प्रत्येक प्रश्न" : "Each Question",
@@ -661,7 +804,7 @@ export default function FundamentalTestPage() {
 
             <div class="certLineOne">
   <span>for participating in </span>
-  <b>Fundamental Test</b>
+  <b>MS Word Test</b>
 </div>
 
             <div class="certLineTwo">
@@ -719,7 +862,7 @@ export default function FundamentalTestPage() {
     return (
       <main className="examPage">
         <section className="startCard">
-          <div className="startBadge">ACTIVE TEST</div>
+          <div className="startBadge">PRACTICAL TEST</div>
           <h1>{t.title}</h1>
           <p className="studentLine">Student: {studentName}</p>
 
@@ -827,7 +970,7 @@ export default function FundamentalTestPage() {
         <section className="resultWrapper">
           <div className="resultTop">
             <span className="badge">TEST RESULT</span>
-            <h1>Computer Fundamental Test Result</h1>
+            <h1>MS Word Test Result</h1>
             <p>Student Name: {studentName}</p>
             <p>Batch Time: {batchTime}</p>
             <p>Language: {language === "mr" ? "Marathi" : "English"}</p>
@@ -894,7 +1037,7 @@ export default function FundamentalTestPage() {
 
                 <div className="certLineOne">
   <span>for participating in</span>
-  <b>Fundamental Test</b>
+  <b>MS Word Test</b>
 </div>
 
                 <div className="certLineTwo">

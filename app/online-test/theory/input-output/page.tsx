@@ -31,260 +31,254 @@ type SubmittedAnswer = {
 
 const questionBank: Question[] = [
   {
-    question: { mr: "Computer म्हणजे काय?", en: "What is a computer?" },
-    options: {
-      mr: ["फक्त टायपिंग करणारे यंत्र", "डेटा स्वीकारून प्रक्रिया करून माहिती देणारे इलेक्ट्रॉनिक यंत्र", "फक्त गेम खेळण्यासाठी वापरले जाणारे यंत्र", "फक्त इंटरनेट वापरण्याचे साधन"],
-      en: ["A device used only for typing", "An electronic device that accepts data, processes it, and gives information", "A device used only for games", "A device used only for internet"],
-    },
-    answer: { mr: "डेटा स्वीकारून प्रक्रिया करून माहिती देणारे इलेक्ट्रॉनिक यंत्र", en: "An electronic device that accepts data, processes it, and gives information" },
+    question: { mr: "Input Device म्हणजे काय?", en: "What is an input device?" },
+    options: { mr: ["Computer मध्ये data/command देण्यासाठी वापरले जाणारे device", "Computer मधून result दाखवणारे device", "फक्त data save करणारे device", "फक्त power देणारे device"], en: ["A device used to enter data/commands into a computer", "A device that shows output from a computer", "A device used only to save data", "A device used only to provide power"] },
+    answer: { mr: "Computer मध्ये data/command देण्यासाठी वापरले जाणारे device", en: "A device used to enter data/commands into a computer" },
   },
   {
-    question: { mr: "Computer चा मेंदू कोणता भाग मानला जातो?", en: "Which part is known as the brain of the computer?" },
-    options: { mr: ["Monitor", "Keyboard", "CPU", "Mouse"], en: ["Monitor", "Keyboard", "CPU", "Mouse"] },
-    answer: { mr: "CPU", en: "CPU" },
+    question: { mr: "Output Device म्हणजे काय?", en: "What is an output device?" },
+    options: { mr: ["Computer मधून result/user ला information देणारे device", "Computer मध्ये data टाकणारे device", "फक्त keyboard", "फक्त storage device"], en: ["A device that gives/shows result or information from a computer", "A device used to enter data into a computer", "Only keyboard", "Only storage device"] },
+    answer: { mr: "Computer मधून result/user ला information देणारे device", en: "A device that gives/shows result or information from a computer" },
   },
   {
-    question: { mr: "खालीलपैकी Input Device कोणते आहे?", en: "Which of the following is an input device?" },
-    options: { mr: ["Monitor", "Printer", "Keyboard", "Speaker"], en: ["Monitor", "Printer", "Keyboard", "Speaker"] },
-    answer: { mr: "Keyboard", en: "Keyboard" },
-  },
-  {
-    question: { mr: "खालीलपैकी Output Device कोणते आहे?", en: "Which of the following is an output device?" },
-    options: { mr: ["Mouse", "Keyboard", "Scanner", "Monitor"], en: ["Mouse", "Keyboard", "Scanner", "Monitor"] },
-    answer: { mr: "Monitor", en: "Monitor" },
-  },
-  {
-    question: { mr: "Information Technology म्हणजे काय?", en: "What is Information Technology?" },
-    options: {
-      mr: ["फक्त मोबाईल वापरणे", "माहिती तयार करणे, साठवणे, प्रक्रिया करणे आणि पाठवणे यासाठी तंत्रज्ञानाचा वापर", "फक्त गेम खेळणे", "फक्त चित्र काढणे"],
-      en: ["Only using mobile phones", "Use of technology to create, store, process, and transmit information", "Only playing games", "Only drawing pictures"],
-    },
-    answer: { mr: "माहिती तयार करणे, साठवणे, प्रक्रिया करणे आणि पाठवणे यासाठी तंत्रज्ञानाचा वापर", en: "Use of technology to create, store, process, and transmit information" },
-  },
-  {
-    question: { mr: "पहिल्या पिढीतील Computer मध्ये कोणत्या तंत्रज्ञानाचा वापर झाला?", en: "Which technology was used in first generation computers?" },
-    options: { mr: ["Transistor", "Vacuum Tube", "Microprocessor", "Artificial Intelligence"], en: ["Transistor", "Vacuum Tube", "Microprocessor", "Artificial Intelligence"] },
-    answer: { mr: "Vacuum Tube", en: "Vacuum Tube" },
-  },
-  {
-    question: { mr: "दुसऱ्या पिढीतील Computer मध्ये कोणत्या तंत्रज्ञानाचा वापर झाला?", en: "Which technology was used in second generation computers?" },
-    options: { mr: ["Vacuum Tube", "Transistor", "IC", "Microprocessor"], en: ["Vacuum Tube", "Transistor", "IC", "Microprocessor"] },
-    answer: { mr: "Transistor", en: "Transistor" },
-  },
-  {
-    question: { mr: "तिसऱ्या पिढीतील Computer मध्ये कोणत्या तंत्रज्ञानाचा वापर झाला?", en: "Which technology was used in third generation computers?" },
-    options: { mr: ["IC", "Vacuum Tube", "Punch Card", "AI"], en: ["IC", "Vacuum Tube", "Punch Card", "AI"] },
-    answer: { mr: "IC", en: "IC" },
-  },
-  {
-    question: { mr: "चौथ्या पिढीतील Computer मध्ये कोणत्या तंत्रज्ञानाचा वापर झाला?", en: "Which technology was used in fourth generation computers?" },
-    options: { mr: ["Microprocessor", "Vacuum Tube", "Transistor", "Mechanical Gear"], en: ["Microprocessor", "Vacuum Tube", "Transistor", "Mechanical Gear"] },
-    answer: { mr: "Microprocessor", en: "Microprocessor" },
-  },
-  {
-    question: { mr: "पाचव्या पिढीतील Computer कोणत्या तंत्रज्ञानाशी संबंधित आहे?", en: "Fifth generation computers are related to which technology?" },
-    options: { mr: ["Artificial Intelligence", "Vacuum Tube", "Abacus", "Typewriter"], en: ["Artificial Intelligence", "Vacuum Tube", "Abacus", "Typewriter"] },
-    answer: { mr: "Artificial Intelligence", en: "Artificial Intelligence" },
-  },
-  {
-    question: { mr: "Super Computer चा उपयोग कशासाठी होतो?", en: "What is a supercomputer used for?" },
-    options: { mr: ["सामान्य टायपिंगसाठी", "अतिशय वेगवान आणि मोठ्या गणनांसाठी", "फक्त संगीत ऐकण्यासाठी", "फक्त फोटो पाहण्यासाठी"], en: ["For normal typing", "For very fast and large calculations", "Only for listening to music", "Only for viewing photos"] },
-    answer: { mr: "अतिशय वेगवान आणि मोठ्या गणनांसाठी", en: "For very fast and large calculations" },
-  },
-  {
-    question: { mr: "Personal Computer ला संक्षिप्त रूपात काय म्हणतात?", en: "What is the short form of Personal Computer?" },
-    options: { mr: ["PC", "CPU", "UPS", "RAM"], en: ["PC", "CPU", "UPS", "RAM"] },
-    answer: { mr: "PC", en: "PC" },
-  },
-  {
-    question: { mr: "Laptop हा कोणत्या प्रकारचा Computer आहे?", en: "Laptop is which type of computer?" },
-    options: { mr: ["Portable Computer", "Super Computer", "Mainframe Computer", "Analog Computer"], en: ["Portable Computer", "Super Computer", "Mainframe Computer", "Analog Computer"] },
-    answer: { mr: "Portable Computer", en: "Portable Computer" },
-  },
-  {
-    question: { mr: "Hardware म्हणजे काय?", en: "What is hardware?" },
-    options: { mr: ["Computer चे स्पर्श करता येणारे भाग", "Computer मधील सूचना", "Internet service", "फक्त MS Word"], en: ["Physical parts of a computer", "Instructions in a computer", "Internet service", "Only MS Word"] },
-    answer: { mr: "Computer चे स्पर्श करता येणारे भाग", en: "Physical parts of a computer" },
-  },
-  {
-    question: { mr: "Software म्हणजे काय?", en: "What is software?" },
-    options: { mr: ["Computer चे physical parts", "Computer ला काम करण्यासाठी दिलेल्या सूचना / programs", "फक्त monitor", "फक्त keyboard"], en: ["Physical parts of computer", "Instructions or programs given to a computer", "Only monitor", "Only keyboard"] },
-    answer: { mr: "Computer ला काम करण्यासाठी दिलेल्या सूचना / programs", en: "Instructions or programs given to a computer" },
-  },
-  {
-    question: { mr: "Operating System चे उदाहरण कोणते?", en: "Which is an example of an operating system?" },
-    options: { mr: ["Windows", "Keyboard", "Printer", "Mouse"], en: ["Windows", "Keyboard", "Printer", "Mouse"] },
-    answer: { mr: "Windows", en: "Windows" },
-  },
-  {
-    question: { mr: "RAM चे full form काय आहे?", en: "What is the full form of RAM?" },
-    options: { mr: ["Read Access Memory", "Random Access Memory", "Run Access Machine", "Read Automatic Memory"], en: ["Read Access Memory", "Random Access Memory", "Run Access Machine", "Read Automatic Memory"] },
-    answer: { mr: "Random Access Memory", en: "Random Access Memory" },
-  },
-  {
-    question: { mr: "ROM चे full form काय आहे?", en: "What is the full form of ROM?" },
-    options: { mr: ["Read Only Memory", "Random Only Memory", "Run Only Machine", "Read Output Memory"], en: ["Read Only Memory", "Random Only Memory", "Run Only Machine", "Read Output Memory"] },
-    answer: { mr: "Read Only Memory", en: "Read Only Memory" },
-  },
-  {
-    question: { mr: "Data म्हणजे काय?", en: "What is data?" },
-    options: { mr: ["अर्थपूर्ण माहिती", "कच्चे तथ्य आणि आकडे", "फक्त चित्र", "फक्त आवाज"], en: ["Meaningful information", "Raw facts and figures", "Only picture", "Only sound"] },
-    answer: { mr: "कच्चे तथ्य आणि आकडे", en: "Raw facts and figures" },
-  },
-  {
-    question: { mr: "Process केलेल्या data ला काय म्हणतात?", en: "What is processed data called?" },
-    options: { mr: ["Information", "Hardware", "Input", "Virus"], en: ["Information", "Hardware", "Input", "Virus"] },
-    answer: { mr: "Information", en: "Information" },
-  },
-  {
-    question: { mr: "Storage device चे उदाहरण कोणते?", en: "Which is an example of a storage device?" },
-    options: { mr: ["Pen Drive", "Monitor", "Keyboard", "Mouse"], en: ["Pen Drive", "Monitor", "Keyboard", "Mouse"] },
-    answer: { mr: "Pen Drive", en: "Pen Drive" },
-  },
-  {
-    question: { mr: "Computer Virus म्हणजे काय?", en: "What is a computer virus?" },
-    options: { mr: ["उपयोगी program", "Computer ला नुकसान करणारा program", "Printer चा भाग", "Monitor चे button"], en: ["Useful program", "A program that can harm the computer", "Part of printer", "Button of monitor"] },
-    answer: { mr: "Computer ला नुकसान करणारा program", en: "A program that can harm the computer" },
-  },
-  {
-    question: { mr: "Antivirus software कशासाठी वापरतात?", en: "What is antivirus software used for?" },
-    options: { mr: ["Virus पासून संरक्षणासाठी", "Typing speed वाढवण्यासाठी", "Monitor चालू करण्यासाठी", "Printer साफ करण्यासाठी"], en: ["To protect from viruses", "To increase typing speed", "To turn on monitor", "To clean printer"] },
-    answer: { mr: "Virus पासून संरक्षणासाठी", en: "To protect from viruses" },
-  },
-  {
-    question: { mr: "Internet म्हणजे काय?", en: "What is the Internet?" },
-    options: { mr: ["Computer चे आतले भाग", "जगभरातील computers चे network", "फक्त game", "फक्त keyboard"], en: ["Internal parts of computer", "A worldwide network of computers", "Only game", "Only keyboard"] },
-    answer: { mr: "जगभरातील computers चे network", en: "A worldwide network of computers" },
-  },
-  {
-    question: { mr: "Browser चे उदाहरण कोणते?", en: "Which is an example of a browser?" },
-    options: { mr: ["Google Chrome", "MS Paint", "Calculator", "Notepad"], en: ["Google Chrome", "MS Paint", "Calculator", "Notepad"] },
-    answer: { mr: "Google Chrome", en: "Google Chrome" },
-  },
-  {
-    question: { mr: "Computer चे मुख्य कार्य कोणते?", en: "What are the main functions of a computer?" },
-    options: { mr: ["Input, Process, Output, Storage", "Only Printing", "Only Typing", "Only Gaming"], en: ["Input, Process, Output, Storage", "Only Printing", "Only Typing", "Only Gaming"] },
-    answer: { mr: "Input, Process, Output, Storage", en: "Input, Process, Output, Storage" },
-  },
-  {
-    question: { mr: "ALU चे full form काय आहे?", en: "What is the full form of ALU?" },
-    options: { mr: ["Arithmetic Logic Unit", "Automatic Logic Unit", "Advanced Link Unit", "Array Logic Unit"], en: ["Arithmetic Logic Unit", "Automatic Logic Unit", "Advanced Link Unit", "Array Logic Unit"] },
-    answer: { mr: "Arithmetic Logic Unit", en: "Arithmetic Logic Unit" },
-  },
-  {
-    question: { mr: "CU चे full form काय आहे?", en: "What is the full form of CU?" },
-    options: { mr: ["Control Unit", "Computer Unit", "Central User", "Code Unit"], en: ["Control Unit", "Computer Unit", "Central User", "Code Unit"] },
-    answer: { mr: "Control Unit", en: "Control Unit" },
-  },
-  {
-    question: { mr: "1 KB मध्ये किती bytes असतात?", en: "How many bytes are there in 1 KB?" },
-    options: { mr: ["1000 bytes", "1024 bytes", "512 bytes", "2048 bytes"], en: ["1000 bytes", "1024 bytes", "512 bytes", "2048 bytes"] },
-    answer: { mr: "1024 bytes", en: "1024 bytes" },
-  },
-  {
-    question: { mr: "1 MB मध्ये किती KB असतात?", en: "How many KB are there in 1 MB?" },
-    options: { mr: ["100 KB", "512 KB", "1024 KB", "2048 KB"], en: ["100 KB", "512 KB", "1024 KB", "2048 KB"] },
-    answer: { mr: "1024 KB", en: "1024 KB" },
-  },
-  {
-    question: { mr: "Bit म्हणजे काय?", en: "What is a bit?" },
-    options: { mr: ["Binary Digit", "Byte Input Tool", "Basic Internet Tag", "Backup Item"], en: ["Binary Digit", "Byte Input Tool", "Basic Internet Tag", "Backup Item"] },
-    answer: { mr: "Binary Digit", en: "Binary Digit" },
-  },
-  {
-    question: { mr: "Byte मध्ये किती bits असतात?", en: "How many bits are there in one byte?" },
-    options: { mr: ["4", "8", "16", "32"], en: ["4", "8", "16", "32"] },
-    answer: { mr: "8", en: "8" },
-  },
-  {
-    question: { mr: "Primary memory चे उदाहरण कोणते?", en: "Which is an example of primary memory?" },
-    options: { mr: ["RAM", "Hard Disk", "DVD", "Pen Drive"], en: ["RAM", "Hard Disk", "DVD", "Pen Drive"] },
-    answer: { mr: "RAM", en: "RAM" },
-  },
-  {
-    question: { mr: "Secondary storage चे उदाहरण कोणते?", en: "Which is an example of secondary storage?" },
-    options: { mr: ["RAM", "Cache", "Hard Disk", "Register"], en: ["RAM", "Cache", "Hard Disk", "Register"] },
-    answer: { mr: "Hard Disk", en: "Hard Disk" },
-  },
-  {
-    question: { mr: "Scanner हे कोणत्या प्रकारचे device आहे?", en: "Scanner is which type of device?" },
+    question: { mr: "Keyboard कोणत्या प्रकारचे device आहे?", en: "Keyboard is which type of device?" },
     options: { mr: ["Input Device", "Output Device", "Storage Device", "Processing Device"], en: ["Input Device", "Output Device", "Storage Device", "Processing Device"] },
     answer: { mr: "Input Device", en: "Input Device" },
   },
   {
-    question: { mr: "Printer हे कोणत्या प्रकारचे device आहे?", en: "Printer is which type of device?" },
-    options: { mr: ["Input Device", "Output Device", "Processing Device", "Memory Device"], en: ["Input Device", "Output Device", "Processing Device", "Memory Device"] },
+    question: { mr: "Monitor कोणत्या प्रकारचे device आहे?", en: "Monitor is which type of device?" },
+    options: { mr: ["Output Device", "Input Device", "Storage Device", "Power Device"], en: ["Output Device", "Input Device", "Storage Device", "Power Device"] },
     answer: { mr: "Output Device", en: "Output Device" },
   },
   {
-    question: { mr: "Touch Screen हे कोणत्या प्रकारचे device आहे?", en: "Touch screen is which type of device?" },
-    options: { mr: ["फक्त Input", "फक्त Output", "Input आणि Output दोन्ही", "Storage"], en: ["Only Input", "Only Output", "Both Input and Output", "Storage"] },
+    question: { mr: "Mouse चा उपयोग मुख्यतः कशासाठी होतो?", en: "What is the main use of a mouse?" },
+    options: { mr: ["Pointer control आणि selection साठी", "Sound output साठी", "Printing साठी", "Data storage साठी"], en: ["To control pointer and selection", "For sound output", "For printing", "For data storage"] },
+    answer: { mr: "Pointer control आणि selection साठी", en: "To control pointer and selection" },
+  },
+  {
+    question: { mr: "Printer कोणत्या प्रकारचे device आहे?", en: "Printer is which type of device?" },
+    options: { mr: ["Output Device", "Input Device", "Processing Device", "Memory Device"], en: ["Output Device", "Input Device", "Processing Device", "Memory Device"] },
+    answer: { mr: "Output Device", en: "Output Device" },
+  },
+  {
+    question: { mr: "Scanner चा उपयोग कशासाठी होतो?", en: "What is a scanner used for?" },
+    options: { mr: ["कागदावरील text/photo computer मध्ये घेण्यासाठी", "Sound ऐकण्यासाठी", "Print काढण्यासाठी", "Power backup साठी"], en: ["To take paper text/photo into the computer", "To listen to sound", "To print documents", "For power backup"] },
+    answer: { mr: "कागदावरील text/photo computer मध्ये घेण्यासाठी", en: "To take paper text/photo into the computer" },
+  },
+  {
+    question: { mr: "Speaker कोणत्या प्रकारचे device आहे?", en: "Speaker is which type of device?" },
+    options: { mr: ["Output Device", "Input Device", "Storage Device", "Input आणि Output दोन्ही नाही"], en: ["Output Device", "Input Device", "Storage Device", "Neither input nor output"] },
+    answer: { mr: "Output Device", en: "Output Device" },
+  },
+  {
+    question: { mr: "Microphone कोणत्या प्रकारचे device आहे?", en: "Microphone is which type of device?" },
+    options: { mr: ["Input Device", "Output Device", "Storage Device", "Display Device"], en: ["Input Device", "Output Device", "Storage Device", "Display Device"] },
+    answer: { mr: "Input Device", en: "Input Device" },
+  },
+  {
+    question: { mr: "Webcam चा उपयोग कशासाठी होतो?", en: "What is a webcam used for?" },
+    options: { mr: ["Photo/Video input घेण्यासाठी", "Hard copy print करण्यासाठी", "Sound output साठी", "Data backup साठी"], en: ["To capture photo/video input", "To print hard copy", "For sound output", "For data backup"] },
+    answer: { mr: "Photo/Video input घेण्यासाठी", en: "To capture photo/video input" },
+  },
+  {
+    question: { mr: "Touch Screen कोणत्या प्रकारचे device आहे?", en: "Touch screen is which type of device?" },
+    options: { mr: ["Input आणि Output दोन्ही", "फक्त Input", "फक्त Output", "Storage Device"], en: ["Both Input and Output", "Only Input", "Only Output", "Storage Device"] },
     answer: { mr: "Input आणि Output दोन्ही", en: "Both Input and Output" },
   },
   {
-    question: { mr: "System Software चे उदाहरण कोणते?", en: "Which is an example of system software?" },
-    options: { mr: ["Operating System", "MS Word Document", "Photo", "Video File"], en: ["Operating System", "MS Word Document", "Photo", "Video File"] },
-    answer: { mr: "Operating System", en: "Operating System" },
+    question: { mr: "Plotter कोणत्या प्रकारचे device आहे?", en: "Plotter is which type of device?" },
+    options: { mr: ["Output Device", "Input Device", "Memory Device", "Network Device"], en: ["Output Device", "Input Device", "Memory Device", "Network Device"] },
+    answer: { mr: "Output Device", en: "Output Device" },
   },
   {
-    question: { mr: "Application Software चे उदाहरण कोणते?", en: "Which is an example of application software?" },
-    options: { mr: ["Windows", "MS Word", "BIOS", "Device Driver"], en: ["Windows", "MS Word", "BIOS", "Device Driver"] },
-    answer: { mr: "MS Word", en: "MS Word" },
+    question: { mr: "Joystick चा उपयोग मुख्यतः कशासाठी होतो?", en: "What is a joystick mainly used for?" },
+    options: { mr: ["Games आणि control साठी input", "Printing साठी", "Sound output साठी", "Document save करण्यासाठी"], en: ["Input for games and control", "For printing", "For sound output", "To save documents"] },
+    answer: { mr: "Games आणि control साठी input", en: "Input for games and control" },
   },
   {
-    question: { mr: "GUI चे full form काय आहे?", en: "What is the full form of GUI?" },
-    options: { mr: ["Graphical User Interface", "General User Internet", "Graphic Unit Input", "Global User Interface"], en: ["Graphical User Interface", "General User Internet", "Graphic Unit Input", "Global User Interface"] },
-    answer: { mr: "Graphical User Interface", en: "Graphical User Interface" },
+    question: { mr: "Barcode Reader कोणत्या प्रकारचे device आहे?", en: "Barcode reader is which type of device?" },
+    options: { mr: ["Input Device", "Output Device", "Display Device", "Power Device"], en: ["Input Device", "Output Device", "Display Device", "Power Device"] },
+    answer: { mr: "Input Device", en: "Input Device" },
   },
   {
-    question: { mr: "CLI चे full form काय आहे?", en: "What is the full form of CLI?" },
-    options: { mr: ["Command Line Interface", "Computer Logic Input", "Central Link Internet", "Control Language Item"], en: ["Command Line Interface", "Computer Logic Input", "Central Link Internet", "Control Language Item"] },
-    answer: { mr: "Command Line Interface", en: "Command Line Interface" },
+    question: { mr: "OMR चा full form काय आहे?", en: "What is the full form of OMR?" },
+    options: { mr: ["Optical Mark Recognition", "Online Mark Reader", "Output Machine Reader", "Optical Memory Register"], en: ["Optical Mark Recognition", "Online Mark Reader", "Output Machine Reader", "Optical Memory Register"] },
+    answer: { mr: "Optical Mark Recognition", en: "Optical Mark Recognition" },
   },
   {
-    question: { mr: "Booting म्हणजे काय?", en: "What is booting?" },
-    options: { mr: ["Computer सुरू होण्याची प्रक्रिया", "File delete करणे", "Printer चालू करणे", "Internet बंद करणे"], en: ["The process of starting a computer", "Deleting a file", "Starting a printer", "Turning off internet"] },
-    answer: { mr: "Computer सुरू होण्याची प्रक्रिया", en: "The process of starting a computer" },
+    question: { mr: "OCR चा full form काय आहे?", en: "What is the full form of OCR?" },
+    options: { mr: ["Optical Character Recognition", "Online Character Reader", "Output Code Reader", "Optical Computer RAM"], en: ["Optical Character Recognition", "Online Character Reader", "Output Code Reader", "Optical Computer RAM"] },
+    answer: { mr: "Optical Character Recognition", en: "Optical Character Recognition" },
   },
   {
-    question: { mr: "Cold Boot म्हणजे काय?", en: "What is cold boot?" },
-    options: { mr: ["Computer बंद अवस्थेतून सुरू करणे", "Restart करणे", "Sleep mode", "Virus scan"], en: ["Starting computer from power off state", "Restarting", "Sleep mode", "Virus scan"] },
-    answer: { mr: "Computer बंद अवस्थेतून सुरू करणे", en: "Starting computer from power off state" },
+    question: { mr: "MICR मुख्यतः कुठे वापरतात?", en: "MICR is mainly used where?" },
+    options: { mr: ["Bank cheque processing मध्ये", "Music output मध्ये", "Photo editing मध्ये", "Video calling मध्ये"], en: ["In bank cheque processing", "In music output", "In photo editing", "In video calling"] },
+    answer: { mr: "Bank cheque processing मध्ये", en: "In bank cheque processing" },
   },
   {
-    question: { mr: "Warm Boot म्हणजे काय?", en: "What is warm boot?" },
-    options: { mr: ["Computer restart करणे", "Computer permanently बंद करणे", "New file create करणे", "Mouse connect करणे"], en: ["Restarting the computer", "Shutting down permanently", "Creating a new file", "Connecting mouse"] },
-    answer: { mr: "Computer restart करणे", en: "Restarting the computer" },
+    question: { mr: "Softcopy म्हणजे काय?", en: "What is a softcopy?" },
+    options: { mr: ["Screen वर दिसणारा digital output", "Paper वर print केलेली copy", "Keyboard input", "Mouse pointer"], en: ["Digital output displayed on screen", "Printed copy on paper", "Keyboard input", "Mouse pointer"] },
+    answer: { mr: "Screen वर दिसणारा digital output", en: "Digital output displayed on screen" },
   },
   {
-    question: { mr: "BIOS चा उपयोग कशासाठी होतो?", en: "What is BIOS used for?" },
-    options: { mr: ["Computer सुरू होताना hardware तपासण्यासाठी", "Only typing", "Only printing", "Only drawing"], en: ["To check hardware while starting computer", "Only typing", "Only printing", "Only drawing"] },
-    answer: { mr: "Computer सुरू होताना hardware तपासण्यासाठी", en: "To check hardware while starting computer" },
+    question: { mr: "Hardcopy म्हणजे काय?", en: "What is a hardcopy?" },
+    options: { mr: ["Paper वर print केलेली copy", "Screen वर दिसणारी file", "Sound output", "Touch input"], en: ["Printed copy on paper", "File shown on screen", "Sound output", "Touch input"] },
+    answer: { mr: "Paper वर print केलेली copy", en: "Printed copy on paper" },
   },
   {
-    question: { mr: "CPU मध्ये कोणते भाग असतात?", en: "Which parts are included in CPU?" },
-    options: { mr: ["ALU आणि CU", "Monitor आणि Keyboard", "Mouse आणि Printer", "Speaker आणि Scanner"], en: ["ALU and CU", "Monitor and Keyboard", "Mouse and Printer", "Speaker and Scanner"] },
-    answer: { mr: "ALU आणि CU", en: "ALU and CU" },
+    question: { mr: "VDU म्हणजे काय?", en: "What does VDU mean?" },
+    options: { mr: ["Visual Display Unit", "Video Data Unit", "Virtual Disk Utility", "Voice Display User"], en: ["Visual Display Unit", "Video Data Unit", "Virtual Disk Utility", "Voice Display User"] },
+    answer: { mr: "Visual Display Unit", en: "Visual Display Unit" },
   },
   {
-    question: { mr: "Cache Memory कशी असते?", en: "What type of memory is cache memory?" },
-    options: { mr: ["खूप वेगवान memory", "खूप slow memory", "फक्त बाह्य storage", "Printer memory"], en: ["Very fast memory", "Very slow memory", "Only external storage", "Printer memory"] },
-    answer: { mr: "खूप वेगवान memory", en: "Very fast memory" },
+    question: { mr: "Monitor ला दुसऱ्या नावाने काय म्हणतात?", en: "Monitor is also called what?" },
+    options: { mr: ["VDU", "CPU", "UPS", "ROM"], en: ["VDU", "CPU", "UPS", "ROM"] },
+    answer: { mr: "VDU", en: "VDU" },
   },
   {
-    question: { mr: "Analog Computer कोणत्या data वर काम करतो?", en: "Analog computer works on which type of data?" },
-    options: { mr: ["Continuous data", "Only text", "Only images", "Only folders"], en: ["Continuous data", "Only text", "Only images", "Only folders"] },
-    answer: { mr: "Continuous data", en: "Continuous data" },
+    question: { mr: "Laser Printer कोणत्या technology वर काम करते?", en: "Laser printer works on which technology?" },
+    options: { mr: ["Laser beam आणि toner", "Ink spray only", "Magnetic tape", "Touch sensor"], en: ["Laser beam and toner", "Ink spray only", "Magnetic tape", "Touch sensor"] },
+    answer: { mr: "Laser beam आणि toner", en: "Laser beam and toner" },
   },
   {
-    question: { mr: "Digital Computer कोणत्या data वर काम करतो?", en: "Digital computer works on which type of data?" },
-    options: { mr: ["Discrete/Binary data", "Only sound", "Only temperature", "Only pressure"], en: ["Discrete/Binary data", "Only sound", "Only temperature", "Only pressure"] },
-    answer: { mr: "Discrete/Binary data", en: "Discrete/Binary data" },
+    question: { mr: "Inkjet Printer मध्ये print करण्यासाठी काय वापरले जाते?", en: "What is used for printing in an inkjet printer?" },
+    options: { mr: ["Ink droplets", "Laser only", "Magnetic ink only", "Heat only"], en: ["Ink droplets", "Laser only", "Magnetic ink only", "Heat only"] },
+    answer: { mr: "Ink droplets", en: "Ink droplets" },
   },
   {
-    question: { mr: "Hybrid Computer मध्ये कोणत्या computer चे गुण असतात?", en: "Hybrid computer has features of which computers?" },
-    options: { mr: ["Analog आणि Digital", "Only Digital", "Only Analog", "Only Manual"], en: ["Analog and Digital", "Only Digital", "Only Analog", "Only Manual"] },
-    answer: { mr: "Analog आणि Digital", en: "Analog and Digital" },
+    question: { mr: "Dot Matrix Printer कसा printer आहे?", en: "Dot Matrix Printer is what type of printer?" },
+    options: { mr: ["Impact Printer", "Non-impact Printer", "Laser Printer", "Thermal Printer only"], en: ["Impact Printer", "Non-impact Printer", "Laser Printer", "Thermal Printer only"] },
+    answer: { mr: "Impact Printer", en: "Impact Printer" },
+  },
+  {
+    question: { mr: "Impact Printer चे उदाहरण कोणते?", en: "Which is an example of an impact printer?" },
+    options: { mr: ["Dot Matrix Printer", "Laser Printer", "Inkjet Printer", "LED Monitor"], en: ["Dot Matrix Printer", "Laser Printer", "Inkjet Printer", "LED Monitor"] },
+    answer: { mr: "Dot Matrix Printer", en: "Dot Matrix Printer" },
+  },
+  {
+    question: { mr: "Non-impact Printer चे उदाहरण कोणते?", en: "Which is an example of a non-impact printer?" },
+    options: { mr: ["Laser Printer", "Dot Matrix Printer", "Keyboard", "Mouse"], en: ["Laser Printer", "Dot Matrix Printer", "Keyboard", "Mouse"] },
+    answer: { mr: "Laser Printer", en: "Laser Printer" },
+  },
+  {
+    question: { mr: "Headphone कोणत्या प्रकारचे device आहे?", en: "Headphone is which type of device?" },
+    options: { mr: ["Output Device", "Input Device", "Storage Device", "Processing Device"], en: ["Output Device", "Input Device", "Storage Device", "Processing Device"] },
+    answer: { mr: "Output Device", en: "Output Device" },
+  },
+  {
+    question: { mr: "Projector कोणत्या प्रकारचे device आहे?", en: "Projector is which type of device?" },
+    options: { mr: ["Output Device", "Input Device", "Memory Device", "Scanner"], en: ["Output Device", "Input Device", "Memory Device", "Scanner"] },
+    answer: { mr: "Output Device", en: "Output Device" },
+  },
+  {
+    question: { mr: "Light Pen कोणत्या प्रकारचे device आहे?", en: "Light pen is which type of device?" },
+    options: { mr: ["Input Device", "Output Device", "Storage Device", "Printer"], en: ["Input Device", "Output Device", "Storage Device", "Printer"] },
+    answer: { mr: "Input Device", en: "Input Device" },
+  },
+  {
+    question: { mr: "Trackball कोणत्या device सारखे काम करते?", en: "Trackball works similar to which device?" },
+    options: { mr: ["Mouse", "Printer", "Monitor", "Speaker"], en: ["Mouse", "Printer", "Monitor", "Speaker"] },
+    answer: { mr: "Mouse", en: "Mouse" },
+  },
+  {
+    question: { mr: "Digitizer/Graphics Tablet चा उपयोग कशासाठी होतो?", en: "Digitizer/Graphics tablet is used for what?" },
+    options: { mr: ["Drawing/design input साठी", "Sound output साठी", "Hard disk format साठी", "Printing साठी"], en: ["For drawing/design input", "For sound output", "For hard disk format", "For printing"] },
+    answer: { mr: "Drawing/design input साठी", en: "For drawing/design input" },
+  },
+  {
+    question: { mr: "Card Reader कोणत्या प्रकारचे device आहे?", en: "Card reader is which type of device?" },
+    options: { mr: ["Input Device", "Output Device", "Display Device", "Speaker"], en: ["Input Device", "Output Device", "Display Device", "Speaker"] },
+    answer: { mr: "Input Device", en: "Input Device" },
+  },
+  {
+    question: { mr: "Biometric Scanner चा उपयोग कशासाठी होतो?", en: "What is a biometric scanner used for?" },
+    options: { mr: ["Fingerprint/identity input साठी", "Printout साठी", "Music साठी", "Screen display साठी"], en: ["For fingerprint/identity input", "For printout", "For music", "For screen display"] },
+    answer: { mr: "Fingerprint/identity input साठी", en: "For fingerprint/identity input" },
+  },
+  {
+    question: { mr: "QR Code Scanner कोणत्या प्रकारचे device आहे?", en: "QR code scanner is which type of device?" },
+    options: { mr: ["Input Device", "Output Device", "Processing Device", "Memory Device"], en: ["Input Device", "Output Device", "Processing Device", "Memory Device"] },
+    answer: { mr: "Input Device", en: "Input Device" },
+  },
+  {
+    question: { mr: "Input चे example कोणते?", en: "Which is an example of input?" },
+    options: { mr: ["Keyboard ने नाव type करणे", "Monitor वर result दिसणे", "Printer ने print काढणे", "Speaker मधून आवाज येणे"], en: ["Typing a name using keyboard", "Seeing result on monitor", "Taking print from printer", "Hearing sound from speaker"] },
+    answer: { mr: "Keyboard ने नाव type करणे", en: "Typing a name using keyboard" },
+  },
+  {
+    question: { mr: "Output चे example कोणते?", en: "Which is an example of output?" },
+    options: { mr: ["Monitor वर result दिसणे", "Keyboard ने data टाकणे", "Mouse click करणे", "Scanner ने photo scan करणे"], en: ["Result displayed on monitor", "Entering data using keyboard", "Mouse click", "Scanning photo using scanner"] },
+    answer: { mr: "Monitor वर result दिसणे", en: "Result displayed on monitor" },
+  },
+  {
+    question: { mr: "CPU कोणत्या प्रकारचा भाग आहे?", en: "CPU is which type of component?" },
+    options: { mr: ["Processing Device", "Input Device", "Output Device", "Only Storage Device"], en: ["Processing Device", "Input Device", "Output Device", "Only Storage Device"] },
+    answer: { mr: "Processing Device", en: "Processing Device" },
+  },
+  {
+    question: { mr: "Pen Drive कोणत्या प्रकारचे device आहे?", en: "Pen drive is which type of device?" },
+    options: { mr: ["Storage Device", "Input Device", "Output Device", "Processing Device"], en: ["Storage Device", "Input Device", "Output Device", "Processing Device"] },
+    answer: { mr: "Storage Device", en: "Storage Device" },
+  },
+  {
+    question: { mr: "Keyboard वरील Enter key चा उपयोग काय?", en: "What is the use of Enter key on keyboard?" },
+    options: { mr: ["Command confirm/new line साठी", "Screen बंद करण्यासाठी", "Sound वाढवण्यासाठी", "Print काढण्यासाठी"], en: ["To confirm command/new line", "To turn off screen", "To increase sound", "To print"] },
+    answer: { mr: "Command confirm/new line साठी", en: "To confirm command/new line" },
+  },
+  {
+    question: { mr: "Keyboard वरील Backspace key चा उपयोग काय?", en: "What is the use of Backspace key?" },
+    options: { mr: ["डावीकडील character delete करण्यासाठी", "Print काढण्यासाठी", "Sound play करण्यासाठी", "Mouse move करण्यासाठी"], en: ["To delete character on the left", "To print", "To play sound", "To move mouse"] },
+    answer: { mr: "डावीकडील character delete करण्यासाठी", en: "To delete character on the left" },
+  },
+  {
+    question: { mr: "Keyboard वरील Caps Lock key चा उपयोग काय?", en: "What is the use of Caps Lock key?" },
+    options: { mr: ["Capital letters type करण्यासाठी", "Computer restart करण्यासाठी", "Print preview साठी", "Speaker mute साठी"], en: ["To type capital letters", "To restart computer", "For print preview", "To mute speaker"] },
+    answer: { mr: "Capital letters type करण्यासाठी", en: "To type capital letters" },
+  },
+  {
+    question: { mr: "Mouse मधील left click चा उपयोग काय?", en: "What is the use of left click of mouse?" },
+    options: { mr: ["Select/open करण्यासाठी", "Only delete करण्यासाठी", "Print करण्यासाठी", "Sound record करण्यासाठी"], en: ["To select/open", "Only to delete", "To print", "To record sound"] },
+    answer: { mr: "Select/open करण्यासाठी", en: "To select/open" },
+  },
+  {
+    question: { mr: "Mouse मधील right click चा उपयोग काय?", en: "What is the use of right click of mouse?" },
+    options: { mr: ["Shortcut/context menu उघडण्यासाठी", "Text type करण्यासाठी", "Sound output साठी", "Screen clean करण्यासाठी"], en: ["To open shortcut/context menu", "To type text", "For sound output", "To clean screen"] },
+    answer: { mr: "Shortcut/context menu उघडण्यासाठी", en: "To open shortcut/context menu" },
+  },
+  {
+    question: { mr: "Mouse scroll wheel चा उपयोग काय?", en: "What is the use of mouse scroll wheel?" },
+    options: { mr: ["Page वर-खाली scroll करण्यासाठी", "Typing करण्यासाठी", "Print काढण्यासाठी", "Recording करण्यासाठी"], en: ["To scroll page up and down", "For typing", "To print", "For recording"] },
+    answer: { mr: "Page वर-खाली scroll करण्यासाठी", en: "To scroll page up and down" },
+  },
+  {
+    question: { mr: "Scanner ने तयार होणारी file साधारण कोणत्या स्वरूपात असू शकते?", en: "Scanner output can usually be in which form?" },
+    options: { mr: ["Image/PDF file", "Only sound file", "Only printed paper", "Only keyboard signal"], en: ["Image/PDF file", "Only sound file", "Only printed paper", "Only keyboard signal"] },
+    answer: { mr: "Image/PDF file", en: "Image/PDF file" },
+  },
+  {
+    question: { mr: "Voice input साठी कोणते device वापरतात?", en: "Which device is used for voice input?" },
+    options: { mr: ["Microphone", "Speaker", "Monitor", "Printer"], en: ["Microphone", "Speaker", "Monitor", "Printer"] },
+    answer: { mr: "Microphone", en: "Microphone" },
+  },
+  {
+    question: { mr: "Sound output साठी कोणते device वापरतात?", en: "Which device is used for sound output?" },
+    options: { mr: ["Speaker", "Keyboard", "Scanner", "Mouse"], en: ["Speaker", "Keyboard", "Scanner", "Mouse"] },
+    answer: { mr: "Speaker", en: "Speaker" },
+  },
+  {
+    question: { mr: "Display output साठी कोणते device वापरतात?", en: "Which device is used for display output?" },
+    options: { mr: ["Monitor", "Keyboard", "Mouse", "Microphone"], en: ["Monitor", "Keyboard", "Mouse", "Microphone"] },
+    answer: { mr: "Monitor", en: "Monitor" },
+  },
+  {
+    question: { mr: "Printed output साठी कोणते device वापरतात?", en: "Which device is used for printed output?" },
+    options: { mr: ["Printer", "Keyboard", "Mouse", "Webcam"], en: ["Printer", "Keyboard", "Mouse", "Webcam"] },
+    answer: { mr: "Printer", en: "Printer" },
+  },
+  {
+    question: { mr: "POS machine मध्ये barcode/item data वाचण्यासाठी कोणते device वापरतात?", en: "Which device is used in POS machines to read barcode/item data?" },
+    options: { mr: ["Barcode Scanner", "Speaker", "Plotter", "Projector"], en: ["Barcode Scanner", "Speaker", "Plotter", "Projector"] },
+    answer: { mr: "Barcode Scanner", en: "Barcode Scanner" },
   },
 
 ];
@@ -304,7 +298,7 @@ const createFinalTestQuestions = (): Question[] => {
   return shuffleArray(questionBank).slice(0, FINAL_TEST_QUESTION_COUNT);
 };
 
-export default function FundamentalTestPage() {
+export default function InputOutputTestPage() {
   const [studentName, setStudentName] = useState("Student");
   const [language, setLanguage] = useState<Lang>("mr");
   const [batchTime, setBatchTime] = useState("");
@@ -371,7 +365,7 @@ export default function FundamentalTestPage() {
   }, [timeLeft, isFinished, examStarted]);
 
   const t = {
-    title: "Computer Fundamental Test",
+    title: "Input Output Test",
     startExam: "Start Exam",
     totalQuestions: language === "mr" ? "एकूण प्रश्न" : "Total Questions",
     eachQuestion: language === "mr" ? "प्रत्येक प्रश्न" : "Each Question",
@@ -661,7 +655,7 @@ export default function FundamentalTestPage() {
 
             <div class="certLineOne">
   <span>for participating in </span>
-  <b>Fundamental Test</b>
+  <b>Input Output Test</b>
 </div>
 
             <div class="certLineTwo">
@@ -827,7 +821,7 @@ export default function FundamentalTestPage() {
         <section className="resultWrapper">
           <div className="resultTop">
             <span className="badge">TEST RESULT</span>
-            <h1>Computer Fundamental Test Result</h1>
+            <h1>Input Output Test Result</h1>
             <p>Student Name: {studentName}</p>
             <p>Batch Time: {batchTime}</p>
             <p>Language: {language === "mr" ? "Marathi" : "English"}</p>
@@ -894,7 +888,7 @@ export default function FundamentalTestPage() {
 
                 <div className="certLineOne">
   <span>for participating in</span>
-  <b>Fundamental Test</b>
+  <b>Input Output Test</b>
 </div>
 
                 <div className="certLineTwo">
