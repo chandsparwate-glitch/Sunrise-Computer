@@ -673,7 +673,14 @@ export default function WindowsTestPage() {
           </div>
 
           <div className="progressWrap">
-            <div className="progressBar" style={ width: `${((currentIndex + 1) / examQuestions.length) * 100}%` }></div>
+            <div className="progressWrap">
+  <div
+    className="progressBar"
+    style={{
+      width: `${((currentIndex + 1) / examQuestions.length) * 100}%`,
+    }}
+  ></div>
+</div>
           </div>
 
           <div className="questionCard">
