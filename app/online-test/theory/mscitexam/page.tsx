@@ -5722,6 +5722,16 @@ function isImageValue(value: string) {
   return /\.(png|jpg|jpeg|gif|webp)$/i.test(value.trim());
 }
 
+function getImageSrc(value: string) {
+  const cleanName = value
+    .trim()
+    .replace(/\s+/g, "_")
+    .replace(/_+/g, "_")
+    .toLowerCase();
+
+  return `${IMAGE_BASE_PATH}${cleanName}`;
+}
+
 function normalizeValue(value: string) {
   return value.trim().replace(/\s+/g, " ").toLowerCase();
 }
@@ -5914,7 +5924,7 @@ export default function MSCITFinalExamPage() {
                         <div className={reviewClass} key={opt.label}>
                           <span className="reviewCircle"></span>
                           {isImageValue(opt.value) ? (
-                            <img src={`${IMAGE_BASE_PATH}${opt.value.trim()}`} alt="option" className="reviewImage" onClick={() => setZoomImage(`${IMAGE_BASE_PATH}${opt.value.trim()}`)} />
+                            <img src={getImageSrc(opt.value)} alt="option" className="reviewImage" onClick={() => setZoomImage(getImageSrc(opt.value))} />
                           ) : (
                             <span>{opt.value}</span>
                           )}
@@ -6034,13 +6044,13 @@ export default function MSCITFinalExamPage() {
                       {isImageValue(opt.value) ? (
                         <span className="optionImageWrap">
                           <img
-                            src={`${IMAGE_BASE_PATH}${opt.value.trim()}`}
+                            src={getImageSrc(opt.value)}
                             alt="option"
                             className="optionImage"
                             title="Click image to zoom"
                             onClick={(e) => {
                               e.stopPropagation();
-                              setZoomImage(`${IMAGE_BASE_PATH}${opt.value.trim()}`);
+                              setZoomImage(getImageSrc(opt.value));
                             }}
                           />
                         </span>
