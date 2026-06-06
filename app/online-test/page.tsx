@@ -22,9 +22,15 @@ export default function OnlineTestPage() {
   const correctPasscode = "44210101";
 
   // ✅ इथे जी test active करायची आहे तिचा id add करा
-  const activeTestIds = ["word", "excel", "powerpoint"];
+  const activeTestIds = ["mscitexam", "word", "excel", "powerpoint"];
 
   const theoryTests: TestUnit[] = [
+    {
+      id: "mscitexam",
+      title: "MS-CIT Final Exam Test",
+      subTitle: "Final exam practice: 15 random questions, timer and instant result.",
+      href: "/online-test/theory/mscitexam",
+    },
     {
       id: "fundamental",
       title: "Fundamental",
@@ -335,40 +341,43 @@ export default function OnlineTestPage() {
       )}
 
       <style jsx global>{`
+        * { box-sizing: border-box; }
+
         .onlineTestPage {
-  min-height: 100vh;
-  padding: 14px 16px 30px;
+          height: 100vh;
+          padding: 10px 14px;
           background:
-            radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 30%),
-            radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.18), transparent 28%),
-            linear-gradient(135deg, #f8fbff, #fff7ed);
+            radial-gradient(circle at 8% 8%, rgba(14, 165, 233, 0.20), transparent 26%),
+            radial-gradient(circle at 92% 90%, rgba(245, 158, 11, 0.22), transparent 26%),
+            linear-gradient(135deg, #eef7ff 0%, #fff8ed 52%, #f7fee7 100%);
           font-family: Arial, sans-serif;
           position: relative;
           overflow: hidden;
+          color: #0f172a;
         }
 
         .bgCircle {
           position: absolute;
           border-radius: 50%;
-          filter: blur(2px);
-          opacity: 0.35;
+          opacity: 0.25;
           z-index: 0;
+          pointer-events: none;
         }
 
         .circleOne {
-          width: 220px;
-          height: 220px;
-          background: #60a5fa;
-          top: 70px;
-          left: -90px;
+          width: 170px;
+          height: 170px;
+          background: #38bdf8;
+          top: 45px;
+          left: -75px;
         }
 
         .circleTwo {
-          width: 260px;
-          height: 260px;
+          width: 210px;
+          height: 210px;
           background: #fb923c;
-          bottom: -100px;
-          right: -100px;
+          bottom: -95px;
+          right: -80px;
         }
 
         .loginSection,
@@ -378,22 +387,22 @@ export default function OnlineTestPage() {
         }
 
         .loginSection {
-  max-width: 1150px;
-  min-height: calc(100vh - 120px);
+          width: min(1080px, 100%);
+          height: calc(100vh - 20px);
           margin: 0 auto;
           display: grid;
-          grid-template-columns: 1.2fr 0.8fr;
+          grid-template-columns: 1.05fr 0.95fr;
           align-items: center;
-          gap: 34px;
+          gap: 22px;
         }
 
         .leftIntro {
-          background: linear-gradient(135deg, #0f172a, #1e3a8a);
+          background: linear-gradient(135deg, #0f172a, #1d4ed8 55%, #0f766e);
           color: white;
-          padding: 42px;
-          border-radius: 30px;
-          box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
-          min-height: 430px;
+          padding: 28px;
+          border-radius: 24px;
+          box-shadow: 0 14px 34px rgba(15, 23, 42, 0.20);
+          min-height: 350px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -401,134 +410,126 @@ export default function OnlineTestPage() {
 
         .brandShape {
           width: fit-content;
-          margin: 0 auto 24px auto;
+          margin: 0 auto 16px;
           text-align: center;
           background: linear-gradient(135deg, #fbbf24, #f97316);
           color: #111827;
-          padding: 14px 28px;
-          border-radius: 22px 22px 22px 4px;
-          font-size: 20px;
+          padding: 10px 20px;
+          border-radius: 18px 18px 18px 4px;
+          font-size: 17px;
           font-weight: 950;
-          letter-spacing: 0.8px;
-          box-shadow: 0 10px 24px rgba(251, 191, 36, 0.3);
-          border: 2px solid rgba(255, 255, 255, 0.45);
+          letter-spacing: 0.6px;
+          box-shadow: 0 8px 18px rgba(251, 191, 36, 0.25);
         }
 
         .leftIntro h1 {
-          font-size: 52px;
-          line-height: 1.08;
+          font-size: 42px;
+          line-height: 1.06;
           margin: 0;
           text-align: center;
         }
 
-        .leftIntro h1 span {
-          color: #fbbf24;
-        }
+        .leftIntro h1 span { color: #fde68a; }
 
         .leftIntro p {
-          color: #dbeafe;
-          font-size: 17px;
-          line-height: 1.7;
-          max-width: 580px;
-          margin: 18px auto 24px;
+          color: #e0f2fe;
+          font-size: 15px;
+          line-height: 1.55;
+          max-width: 560px;
+          margin: 14px auto 18px;
           text-align: center;
         }
 
         .featureBox {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 12px;
+          gap: 10px;
         }
 
         .featureBox div {
-          background: rgba(255, 255, 255, 0.12);
+          background: rgba(255, 255, 255, 0.13);
           border: 1px solid rgba(255, 255, 255, 0.18);
-          padding: 13px;
-          border-radius: 14px;
+          padding: 10px 11px;
+          border-radius: 13px;
           font-weight: 800;
-          font-size: 14px;
+          font-size: 13px;
         }
 
         .loginCard {
           width: 100%;
-          background: rgba(255, 255, 255, 0.94);
-          backdrop-filter: blur(12px);
-          padding: 32px;
-          border-radius: 28px;
-          box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
-          border: 1px solid rgba(255, 255, 255, 0.7);
+          background: rgba(255, 255, 255, 0.96);
+          padding: 24px;
+          border-radius: 24px;
+          box-shadow: 0 14px 34px rgba(15, 23, 42, 0.14);
+          border: 1px solid rgba(255, 255, 255, 0.8);
         }
 
         .loginTitleRow {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 12px;
-}
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 8px;
+        }
 
-.loginIcon {
-  width: 56px;
-  height: 56px;
-  border-radius: 18px;
-  background: linear-gradient(135deg, #2563eb, #f97316);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  flex-shrink: 0;
-}
+        .loginIcon {
+          width: 48px;
+          height: 48px;
+          border-radius: 16px;
+          background: linear-gradient(135deg, #2563eb, #f97316);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 26px;
+          flex-shrink: 0;
+        }
 
-.loginCard h2 {
-  font-size: 31px;
-  color: #0f172a;
-  margin: 0;
-}
+        .loginCard h2 {
+          font-size: 27px;
+          color: #0f172a;
+          margin: 0;
+        }
 
         .loginText {
           color: #475569;
-          font-size: 15px;
-          margin-bottom: 18px;
-          line-height: 1.6;
+          font-size: 14px;
+          margin: 0 0 13px;
+          line-height: 1.45;
         }
 
         .loginTypeBox {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 12px;
-          margin-bottom: 14px;
+          gap: 10px;
+          margin-bottom: 10px;
         }
 
         .typeBtn {
           border: 1px solid #cbd5e1;
           background: #f8fafc;
           color: #0f172a;
-          padding: 14px 10px;
-          border-radius: 16px;
+          padding: 11px 8px;
+          border-radius: 15px;
           cursor: pointer;
           font-weight: 900;
           display: flex;
           flex-direction: column;
-          gap: 4px;
+          gap: 3px;
           align-items: center;
-          transition: 0.2s ease;
+          transition: 0.18s ease;
         }
 
-        .typeBtn span {
-          font-size: 24px;
-        }
+        .typeBtn span { font-size: 22px; }
 
         .typeBtn small {
           color: #64748b;
-          font-size: 11px;
+          font-size: 10px;
           font-weight: 800;
         }
 
-        .typeBtn:hover {
-          transform: translateY(-1px);
-        }
+        .typeBtn:hover { transform: translateY(-1px); }
 
         .activeDemo {
-          border-color: #16a34a;
+          border-color: #22c55e;
           background: #dcfce7;
           color: #166534;
         }
@@ -540,12 +541,12 @@ export default function OnlineTestPage() {
         }
 
         .modeNote {
-          padding: 11px 13px;
-          border-radius: 14px;
-          font-size: 13px;
+          padding: 9px 11px;
+          border-radius: 13px;
+          font-size: 12.5px;
           font-weight: 800;
-          margin-bottom: 14px;
-          line-height: 1.5;
+          margin-bottom: 10px;
+          line-height: 1.4;
         }
 
         .demoNote {
@@ -563,78 +564,83 @@ export default function OnlineTestPage() {
         form {
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: 8px;
         }
 
         label {
-          font-size: 14px;
-          font-weight: 800;
+          font-size: 13px;
+          font-weight: 850;
           color: #1e293b;
-          margin-top: 6px;
+          margin-top: 4px;
         }
 
         input {
           width: 100%;
-          padding: 14px 15px;
+          padding: 12px 13px;
           border: 1px solid #cbd5e1;
-          border-radius: 14px;
-          font-size: 15px;
+          border-radius: 13px;
+          font-size: 14px;
           outline: none;
           background: #ffffff;
         }
 
         input:focus {
           border-color: #2563eb;
-          box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.13);
+          box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.13);
         }
 
         form button {
-          margin-top: 12px;
-          padding: 15px;
+          margin-top: 8px;
+          padding: 13px;
           border: none;
-          border-radius: 15px;
-          background: linear-gradient(135deg, #2563eb, #1d4ed8);
+          border-radius: 14px;
+          background: linear-gradient(135deg, #2563eb, #0f766e);
           color: white;
-          font-size: 16px;
-          font-weight: 900;
+          font-size: 15px;
+          font-weight: 950;
           cursor: pointer;
-          box-shadow: 0 10px 20px rgba(37, 99, 235, 0.22);
+          box-shadow: 0 9px 18px rgba(37, 99, 235, 0.20);
         }
 
         .errorMsg {
           background: #fee2e2;
           color: #b91c1c;
-          padding: 10px 12px;
-          border-radius: 12px;
-          font-size: 14px;
-          margin: 6px 0 0;
+          padding: 9px 11px;
+          border-radius: 11px;
+          font-size: 13px;
+          margin: 5px 0 0;
           font-weight: 800;
         }
 
         .helpText {
-          margin-top: 16px;
+          margin: 12px 0 0;
           color: #64748b;
-          font-size: 13px;
+          font-size: 12.5px;
           text-align: center;
-          line-height: 1.5;
+          line-height: 1.4;
         }
 
         .testDashboard {
-          max-width: 1200px;
+          width: min(1160px, 100%);
+          height: calc(100vh - 20px);
           margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          min-height: 0;
         }
 
         .topBox {
-          background: linear-gradient(135deg, #0f172a, #1e3a8a);
+          background: linear-gradient(135deg, #0f172a, #1d4ed8 62%, #0f766e);
           color: white;
-          border-radius: 28px;
-          padding: 30px;
-          margin-bottom: 22px;
+          border-radius: 22px;
+          padding: 18px 22px;
+          margin-bottom: 10px;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          gap: 16px;
-          box-shadow: 0 18px 42px rgba(15, 23, 42, 0.22);
+          gap: 14px;
+          box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
+          flex-shrink: 0;
         }
 
         .dashboardTag {
@@ -642,48 +648,51 @@ export default function OnlineTestPage() {
           background: rgba(255, 255, 255, 0.14);
           border: 1px solid rgba(255, 255, 255, 0.24);
           color: #fef3c7;
-          padding: 7px 12px;
+          padding: 5px 10px;
           border-radius: 999px;
-          font-size: 12px;
+          font-size: 11px;
           font-weight: 900;
-          margin-bottom: 10px;
+          margin-bottom: 6px;
         }
 
         .topBox h1 {
-          margin: 0 0 6px;
-          font-size: 34px;
+          margin: 0 0 3px;
+          font-size: 26px;
+          line-height: 1.1;
         }
 
         .topBox p {
           margin: 0;
           color: #dbeafe;
-          line-height: 1.6;
+          line-height: 1.35;
+          font-size: 13px;
         }
 
         .logoutBtn {
           border: 1px solid rgba(255, 255, 255, 0.45);
           background: rgba(255, 255, 255, 0.12);
           color: white;
-          padding: 12px 18px;
-          border-radius: 14px;
+          padding: 10px 15px;
+          border-radius: 13px;
           font-weight: 900;
           cursor: pointer;
+          flex-shrink: 0;
         }
 
         .demoGrid {
           display: grid;
-          grid-template-columns: minmax(0, 520px);
+          grid-template-columns: minmax(0, 440px);
           justify-content: center;
-          gap: 18px;
-          margin-top: 20px;
+          gap: 14px;
+          margin-top: 12px;
         }
 
         .demoCard {
           background: white;
-          border-radius: 24px;
-          padding: 30px;
+          border-radius: 22px;
+          padding: 22px;
           border: 1px solid #fed7aa;
-          box-shadow: 0 16px 35px rgba(249, 115, 22, 0.16);
+          box-shadow: 0 12px 26px rgba(249, 115, 22, 0.13);
           text-align: center;
         }
 
@@ -691,25 +700,25 @@ export default function OnlineTestPage() {
           display: inline-block;
           background: #ffedd5;
           color: #c2410c;
-          padding: 7px 13px;
+          padding: 6px 11px;
           border-radius: 999px;
-          font-size: 12px;
+          font-size: 11px;
           font-weight: 950;
-          margin-bottom: 12px;
+          margin-bottom: 8px;
         }
 
         .demoCard h3 {
-          margin: 0 0 10px;
+          margin: 0 0 8px;
           color: #0f172a;
-          font-size: 30px;
+          font-size: 25px;
           font-weight: 950;
         }
 
         .demoCard p {
           color: #64748b;
-          line-height: 1.6;
-          margin: 0 0 20px;
-          font-size: 16px;
+          line-height: 1.45;
+          margin: 0 0 15px;
+          font-size: 14px;
           font-weight: 700;
         }
 
@@ -718,140 +727,134 @@ export default function OnlineTestPage() {
           text-decoration: none;
           background: linear-gradient(135deg, #f97316, #dc2626);
           color: #ffffff !important;
-          padding: 14px 26px;
-          border-radius: 20px 20px 20px 5px;
-          font-size: 17px;
+          padding: 12px 22px;
+          border-radius: 18px 18px 18px 5px;
+          font-size: 15px;
           font-weight: 950;
-          box-shadow: 0 10px 22px rgba(249, 115, 22, 0.34);
+          box-shadow: 0 8px 18px rgba(249, 115, 22, 0.28);
           border: 2px solid rgba(255, 255, 255, 0.85);
-          animation: demoBlink 1s infinite;
-        }
-
-        .demoBtn:hover {
-          transform: translateY(-2px) scale(1.03);
-        }
-
-        @keyframes demoBlink {
-          0% {
-            opacity: 1;
-            transform: scale(1);
-            box-shadow: 0 10px 22px rgba(249, 115, 22, 0.34);
-          }
-          50% {
-            opacity: 0.72;
-            transform: scale(1.06);
-            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.45);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1);
-            box-shadow: 0 10px 22px rgba(249, 115, 22, 0.34);
-          }
         }
 
         .activeNotice {
-          background: #eff6ff;
+          background: rgba(255, 255, 255, 0.82);
           border: 1px solid #bfdbfe;
           color: #1e3a8a;
-          padding: 14px 16px;
-          border-radius: 16px;
-          margin-bottom: 20px;
-          font-size: 15px;
+          padding: 9px 13px;
+          border-radius: 14px;
+          margin-bottom: 10px;
+          font-size: 13px;
+          box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08);
+          flex-shrink: 0;
         }
 
         .testGrid {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 24px;
+          gap: 14px;
+          min-height: 0;
+          flex: 1;
         }
 
         .block {
-          background: white;
-          border-radius: 24px;
-          padding: 24px;
-          box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+          background: rgba(255, 255, 255, 0.92);
+          border-radius: 20px;
+          padding: 15px;
+          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
           border: 1px solid #e2e8f0;
+          min-height: 0;
+          display: flex;
+          flex-direction: column;
         }
 
         .blockTitleNew {
           display: flex;
           justify-content: center;
-          margin-bottom: 16px;
+          margin-bottom: 8px;
+          flex-shrink: 0;
         }
 
         .blockTitleNew h2 {
           margin: 0;
           color: white;
-          font-size: 24px;
+          font-size: 20px;
           font-weight: 950;
           text-align: center;
-          padding: 13px 28px;
-          border-radius: 22px 22px 22px 4px;
-          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+          padding: 9px 22px;
+          border-radius: 18px 18px 18px 4px;
+          box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14);
         }
 
         .theory .blockTitleNew h2 {
-          background: linear-gradient(135deg, #2563eb, #1d4ed8);
+          background: linear-gradient(135deg, #2563eb, #0f766e);
         }
 
         .practical .blockTitleNew h2 {
-          background: linear-gradient(135deg, #f97316, #ea580c);
+          background: linear-gradient(135deg, #f97316, #db2777);
         }
 
         .blockDesc {
-          margin: 0 0 18px;
+          margin: 0 0 10px;
           color: #64748b;
-          line-height: 1.5;
-          font-size: 14px;
+          line-height: 1.35;
+          font-size: 12.5px;
           text-align: center;
+          flex-shrink: 0;
         }
 
         .unitList {
           display: flex;
           flex-direction: column;
-          gap: 14px;
+          gap: 9px;
+          overflow-y: auto;
+          padding-right: 4px;
+          min-height: 0;
         }
+
+        .unitList::-webkit-scrollbar { width: 7px; }
+        .unitList::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 999px; }
+        .unitList::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
 
         .unitCard {
           border: 1px solid #e2e8f0;
-          border-radius: 18px;
-          padding: 16px;
+          border-radius: 15px;
+          padding: 11px 12px;
           background: #f8fafc;
           transition: 0.2s ease;
         }
 
         .unitCardActive {
-          background: linear-gradient(135deg, #f0fdf4, #ffffff);
+          background: linear-gradient(135deg, #ecfdf5, #ffffff);
           border-color: #86efac;
-          box-shadow: 0 10px 24px rgba(22, 163, 74, 0.15);
+          box-shadow: 0 8px 18px rgba(22, 163, 74, 0.10);
         }
 
         .unitCardInactive {
           background: #f8fafc;
           border-color: #e2e8f0;
-          opacity: 0.9;
+          opacity: 0.86;
         }
 
         .unitTop {
           display: flex;
           justify-content: space-between;
-          align-items: flex-start;
-          gap: 10px;
-          margin-bottom: 6px;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 4px;
         }
 
         .unitCard h3 {
           margin: 0;
           color: #111827;
-          font-size: 18px;
+          font-size: 15.5px;
+          line-height: 1.25;
         }
 
         .statusActive {
           background: #16a34a;
           color: white;
-          padding: 5px 10px;
+          padding: 4px 8px;
           border-radius: 999px;
-          font-size: 11px;
+          font-size: 10px;
           font-weight: 900;
           white-space: nowrap;
         }
@@ -859,110 +862,66 @@ export default function OnlineTestPage() {
         .unitCard p {
           margin: 0;
           color: #64748b;
-          font-size: 14px;
-          line-height: 1.6;
+          font-size: 12.2px;
+          line-height: 1.35;
         }
 
-        .startWrap {
-          margin-top: 14px;
-        }
+        .startWrap { margin-top: 8px; }
 
         .startBtn {
           text-decoration: none;
           color: white;
           background: linear-gradient(135deg, #ec4899, #dc2626);
-          padding: 11px 18px;
-          border-radius: 18px 18px 18px 4px;
-          font-size: 14px;
+          padding: 8px 14px;
+          border-radius: 15px 15px 15px 4px;
+          font-size: 12.5px;
           font-weight: 950;
-          box-shadow: 0 10px 22px rgba(236, 72, 153, 0.34);
-          border: 2px solid rgba(255, 255, 255, 0.85);
-          animation: startBlink 1s infinite;
+          box-shadow: 0 8px 16px rgba(236, 72, 153, 0.25);
+          border: 1px solid rgba(255, 255, 255, 0.85);
           display: inline-block;
         }
 
-        @keyframes startBlink {
-          0% {
-            opacity: 1;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.65;
-            transform: scale(1.06);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1);
-          }
+        .startBtn:hover,
+        .demoBtn:hover,
+        .logoutBtn:hover,
+        form button:hover {
+          transform: translateY(-1px);
+          filter: brightness(1.03);
         }
 
         @media (max-width: 950px) {
+          .onlineTestPage {
+            height: auto;
+            min-height: 100vh;
+            overflow-y: auto;
+          }
+
+          .loginSection,
+          .testDashboard {
+            height: auto;
+            min-height: calc(100vh - 20px);
+          }
+
           .loginSection,
           .testGrid {
             grid-template-columns: 1fr;
           }
 
-          .leftIntro {
-            min-height: auto;
-          }
+          .leftIntro { min-height: auto; }
+          .unitList { max-height: none; overflow: visible; }
         }
 
         @media (max-width: 600px) {
-          .onlineTestPage {
-  padding: 10px 12px 24px;
-}
-
-          .leftIntro {
-            padding: 26px;
-            border-radius: 22px;
-          }
-
-          .brandShape {
-            font-size: 15px;
-            padding: 12px 18px;
-          }
-
-          .leftIntro h1 {
-            font-size: 36px;
-          }
-
-          .featureBox,
-          .loginTypeBox {
-            grid-template-columns: 1fr;
-          }
-
-          .loginCard {
-            padding: 24px;
-            border-radius: 22px;
-          }
-
-          .topBox {
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 22px;
-          }
-
-          .topBox h1 {
-            font-size: 25px;
-          }
-
-          .demoCard {
-            padding: 24px;
-          }
-
-          .demoCard h3 {
-            font-size: 26px;
-          }
-
-          .demoBtn {
-            width: 100%;
-            text-align: center;
-          }
-
-          .startBtn {
-            width: 100%;
-            text-align: center;
-          }
+          .onlineTestPage { padding: 8px 10px; }
+          .leftIntro { padding: 22px; border-radius: 20px; }
+          .brandShape { font-size: 14px; padding: 9px 15px; }
+          .leftIntro h1 { font-size: 32px; }
+          .featureBox, .loginTypeBox { grid-template-columns: 1fr; }
+          .loginCard { padding: 20px; border-radius: 20px; }
+          .topBox { flex-direction: column; align-items: flex-start; padding: 16px; }
+          .topBox h1 { font-size: 22px; }
+          .demoCard { padding: 20px; }
+          .demoBtn, .startBtn { width: 100%; text-align: center; }
         }
       `}</style>
     </main>
