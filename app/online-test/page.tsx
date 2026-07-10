@@ -22,7 +22,7 @@ export default function OnlineTestPage() {
   const correctPasscode = "44210101";
 
   // ✅ इथे जी test active करायची आहे तिचा id add करा
-  const activeTestIds = ["mscitexam", "word", "excel", "powerpoint"];
+  const activeTestIds = ["mscitexam", "mscit-final-july26", "word", "excel", "powerpoint"];
 
   const theoryTests: TestUnit[] = [
     {
@@ -31,6 +31,13 @@ export default function OnlineTestPage() {
       subTitle: "Final exam practice: 15 random questions, timer and instant result.",
       href: "/online-test/theory/mscitexam",
     },
+    {
+  id: "mscit-final-july26",
+  title: "MSCIT Final Exam July 26",
+  subTitle:
+    "Final Exam Practice Test - 15 Questions | 10 Minutes | 1 Mark Each",
+  href: "/online-test/theory/mscit-final-july26",
+},
     {
       id: "fundamental",
       title: "Fundamental",
